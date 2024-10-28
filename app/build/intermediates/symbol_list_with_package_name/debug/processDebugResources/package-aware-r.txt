@@ -2988,6 +2988,7 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable account_detail
+drawable add
 drawable arrow
 drawable avd_hide_password
 drawable avd_show_password
@@ -3021,11 +3022,14 @@ drawable design_snackbar_background
 drawable edit
 drawable ellipse_4
 drawable ellipse_5
+drawable employee
 drawable employee_type_shape
 drawable green_circle
 drawable group_98
 drawable half_circle_blue
+drawable hr
 drawable ic_arrow_back_black_24
+drawable ic_avatar_placeholder
 drawable ic_call_answer
 drawable ic_call_answer_low
 drawable ic_call_answer_video
@@ -3046,8 +3050,10 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
 drawable indeterminate_static
+drawable it
 drawable item_account
 drawable left_arrow
+drawable list
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
 drawable m3_bottom_sheet_drag_handle
@@ -3062,6 +3068,7 @@ drawable m3_tabs_transparent_background
 drawable mail_img
 drawable management_img
 drawable manager_type_shape
+drawable marketing
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -3072,6 +3079,7 @@ drawable material_ic_keyboard_arrow_previous_black_24dp
 drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
+drawable menu
 drawable mtrl_bottomsheet_drag_handle
 drawable mtrl_checkbox_button
 drawable mtrl_checkbox_button_checked_unchecked
@@ -3137,6 +3145,7 @@ drawable rectangle
 drawable rectangle_item
 drawable request_img
 drawable rounded_corner_background
+drawable sale
 drawable sand_clock
 drawable search
 drawable teamwork_1256650
@@ -3225,6 +3234,7 @@ id activity_chooser_view_content
 id add
 id addAccountBtn
 id addBtn
+id addEmployeeButton
 id alertTitle
 id aligned
 id all
@@ -3325,6 +3335,9 @@ id deleteBtn
 id deleteBtn2
 id deleteBtn3
 id deltaRelative
+id departmentGridView
+id departmentImageView
+id departmentNameTextView
 id dependency_ordering
 id description
 id design_bottom_sheet
@@ -3361,6 +3374,7 @@ id edit_query
 id edit_text_id
 id elastic
 id embed
+id employeeManagementLayout
 id end
 id endToStart
 id enterAlways
@@ -3415,10 +3429,15 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageButton
 id imageDepartment
 id imageView
 id imageView10
 id imageView11
+id imageView12
+id imageView13
+id imageView14
+id imageView15
 id imageView2
 id imageView3
 id imageView4
@@ -3426,6 +3445,7 @@ id imageView5
 id imageView6
 id imageView7
 id imageView8
+id imageView9
 id imgSetting
 id img_arrow
 id img_searchbox
@@ -3467,6 +3487,7 @@ id line1
 id line3
 id linear
 id linearLayout
+id listButton
 id listMode
 id listView
 id list_item
@@ -3622,6 +3643,7 @@ id scrollIndicatorUp
 id scrollView
 id scrollable
 id searchBtn
+id searchView
 id search_badge
 id search_bar
 id search_button
@@ -3708,6 +3730,14 @@ id textTop
 id textView
 id textView10
 id textView11
+id textView12
+id textView13
+id textView14
+id textView15
+id textView16
+id textView17
+id textView18
+id textView19
 id textView2
 id textView3
 id textView4
@@ -3915,9 +3945,11 @@ layout check_in_out
 layout create_account
 layout create_csvc_admin
 layout create_department_admin
+layout create_employee
 layout create_request_client
 layout csvc_management_admin
 layout custom_dialog
+layout department_management
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -3933,11 +3965,13 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout employee_management
 layout homepage
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_calendar
 layout item_check_in_out
+layout item_department
 layout login
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
