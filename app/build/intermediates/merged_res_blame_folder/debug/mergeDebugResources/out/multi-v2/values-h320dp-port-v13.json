@@ -4,7 +4,11 @@
             "outputFile": "com.example.tenpm_hrm.app-mergeDebugResources-29:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
             "map": [
                 {
+<<<<<<< HEAD
                     "source": "C:\\Users\\Acer\\.gradle\\caches\\8.9\\transforms\\2b6bbd7ce52c90bbccd242ae6ed855a4\\transformed\\material-1.12.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
+=======
+                    "source": "C:\\Users\\DELL\\.gradle\\caches\\8.9\\transforms\\2b6bbd7ce52c90bbccd242ae6ed855a4\\transformed\\material-1.12.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
+>>>>>>> 60ff872ec2054195b3b8a68ec54597ce53129a09
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -1,6 +1,8 @@
 package com.example.tenpm_hrm;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,6 +36,14 @@ public class AttendanceManagement extends AppCompatActivity implements CalendarR
         selectedDate = LocalDate.now();
         setTvMonthYear();
 
+        ImageView ivEmployee1Detail = findViewById(R.id.ivEmployee1Detail);
+        ivEmployee1Detail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AttendanceManagement.this, AttendanceDetails.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private String monthYearFromDate(LocalDate selectedDate) {

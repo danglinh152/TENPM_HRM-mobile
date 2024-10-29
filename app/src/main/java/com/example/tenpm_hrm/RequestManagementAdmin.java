@@ -1,12 +1,13 @@
 package com.example.tenpm_hrm;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
-
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.ArrayList;
-
 import customlistview.RequestAdminAdapter;
 import models.Request;
 
@@ -33,5 +34,31 @@ public class RequestManagementAdmin extends AppCompatActivity {
 
         adapter = new RequestAdminAdapter(this, R.layout.request_item, requests);
         listView.setAdapter(adapter);
+
+        // Set up item click listener
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                showConfirmationDialog(position);
+            }
+        });
+    }
+
+    private void showConfirmationDialog(int position) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Xác nhận hành động")
+                .setMessage("Bạn có muốn xử lý yêu cầu: " + requests.get(position).getInformation() + "?")
+                .setPositiveButton("Xác nhận", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // Handle the confirmation action here
+                    }
+                })
+                .setNegativeButton("Hủy", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss(); // Close the dialog
+                    }
+                });
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }
