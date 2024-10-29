@@ -3287,6 +3287,7 @@ int id cardAttendance 0x7f080083
 int id cardDepartment 0x7f080084
 int id cardEmployee 0x7f080085
 int id cardFacilities 0x7f080086
+int id cardInfo 0x7f0802cc
 int id cardProject 0x7f080087
 int id cardRequest 0x7f080088
 int id carryVelocity 0x7f080089
@@ -4013,7 +4014,8 @@ int layout design_navigation_menu_item 0x7f0b0037
 int layout design_text_input_end_icon 0x7f0b0038
 int layout design_text_input_start_icon 0x7f0b0039
 int layout employee_management 0x7f0b003a
-int layout homepage 0x7f0b003b
+int layout homepage_admin 0x7f0b0084
+int layout homepage_client 0x7f0b0085
 int layout ime_base_split_test_activity 0x7f0b003c
 int layout ime_secondary_split_test_activity 0x7f0b003d
 int layout item_calendar 0x7f0b003e

@@ -94,6 +94,7 @@ id cardAttendance
 id cardDepartment
 id cardEmployee
 id cardFacilities
+id cardInfo
 id cardProject
 id cardRequest
 id checkIn
@@ -292,7 +293,8 @@ layout create_request_client
 layout csvc_management_admin
 layout department_management
 layout employee_management
-layout homepage
+layout homepage_admin
+layout homepage_client
 layout item_calendar
 layout item_check_in_out
 layout item_department

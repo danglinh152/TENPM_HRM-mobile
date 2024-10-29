@@ -3288,6 +3288,7 @@ id cardAttendance
 id cardDepartment
 id cardEmployee
 id cardFacilities
+id cardInfo
 id cardProject
 id cardRequest
 id carryVelocity
@@ -4014,7 +4015,8 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout employee_management
-layout homepage
+layout homepage_admin
+layout homepage_client
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_calendar

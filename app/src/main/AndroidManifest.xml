@@ -183,7 +183,17 @@
 <!--        homepage-->
 
         <activity
-            android:name=".Homepage"
+            android:name=".HomepageAdmin"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".HomePageClient"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
