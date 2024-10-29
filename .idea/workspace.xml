@@ -75,11 +75,6 @@
           <theme>@style/Theme.TENPM_HRM</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/employee_information.xml">
-        <config>
-          <theme>@style/Theme.TENPM_HRM</theme>
-        </config>
-      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/employee_management.xml">
         <config>
           <theme>@style/Theme.TENPM_HRM</theme>
@@ -146,18 +141,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd0901ee-3f38-4d02-95f4-11fe2594751f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/account_management_admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/account_management_admin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/create_account.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/create_account.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/create_csvc_admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/create_csvc_admin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/create_department_admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/create_department_admin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/create_employee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/create_employee.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/create_request_client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/create_request_client.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/csvc_management_admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/csvc_management_admin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/department_management.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/department_management.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/request_management_admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/request_management_admin.xml" afterDir="false" />
-    </list>
+    <list default="true" id="cd0901ee-3f38-4d02-95f4-11fe2594751f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
