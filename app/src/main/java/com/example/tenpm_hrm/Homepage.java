@@ -49,5 +49,95 @@ public class Homepage extends AppCompatActivity {
 //                v.postDelayed(() -> progressBar.setVisibility(View.GONE), 300);
             }
         });
+        cardEmployee.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Show ProgressBar before starting the new activity
+//                progressBar.setVisibility(View.VISIBLE);
+
+                // Start the new activity
+                Intent newRequestIntent = new Intent(Homepage.this, EmployeeManagement.class);
+                startActivity(newRequestIntent);
+
+                // Optionally hide the ProgressBar after a short delay
+                // This is just to simulate loading; adjust as needed
+//                v.postDelayed(() -> progressBar.setVisibility(View.GONE), 300);
+            }
+        });
+        cardDepartment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Show ProgressBar before starting the new activity
+//                progressBar.setVisibility(View.VISIBLE);
+
+                // Start the new activity
+                Intent newRequestIntent = new Intent(Homepage.this, DepartmentManagement.class);
+                startActivity(newRequestIntent);
+
+                // Optionally hide the ProgressBar after a short delay
+                // This is just to simulate loading; adjust as needed
+//                v.postDelayed(() -> progressBar.setVisibility(View.GONE), 300);
+            }
+        });
+        cardAttendance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Show ProgressBar before starting the new activity
+//                progressBar.setVisibility(View.VISIBLE);
+
+                // Start the new activity
+                Intent newRequestIntent = new Intent(Homepage.this, AttendanceManagement.class);
+                startActivity(newRequestIntent);
+
+                // Optionally hide the ProgressBar after a short delay
+                // This is just to simulate loading; adjust as needed
+//                v.postDelayed(() -> progressBar.setVisibility(View.GONE), 300);
+            }
+        });
+        cardFacilities.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Show ProgressBar before starting the new activity
+//                progressBar.setVisibility(View.VISIBLE);
+
+                // Start the new activity
+                Intent newRequestIntent = new Intent(Homepage.this, CSVCManagement.class);
+                startActivity(newRequestIntent);
+
+                // Optionally hide the ProgressBar after a short delay
+                // This is just to simulate loading; adjust as needed
+//                v.postDelayed(() -> progressBar.setVisibility(View.GONE), 300);
+            }
+        });
+        cardProject.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Show ProgressBar before starting the new activity
+//                progressBar.setVisibility(View.VISIBLE);
+
+                // Start the new activity
+                Intent newRequestIntent = new Intent(Homepage.this, ProjectManagement.class);
+                startActivity(newRequestIntent);
+
+                // Optionally hide the ProgressBar after a short delay
+                // This is just to simulate loading; adjust as needed
+//                v.postDelayed(() -> progressBar.setVisibility(View.GONE), 300);
+            }
+        });
+        cardAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Show ProgressBar before starting the new activity
+//                progressBar.setVisibility(View.VISIBLE);
+
+                // Start the new activity
+                Intent newRequestIntent = new Intent(Homepage.this, AccountManagement .class);
+                startActivity(newRequestIntent);
+
+                // Optionally hide the ProgressBar after a short delay
+                // This is just to simulate loading; adjust as needed
+//                v.postDelayed(() -> progressBar.setVisibility(View.GONE), 300);
+            }
+        });
     }
 }
