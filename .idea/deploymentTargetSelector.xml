@@ -5,21 +5,18 @@
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-<<<<<<< HEAD
-=======
       <SelectionState runConfigName="Homepage">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
       <SelectionState runConfigName="ProjectManagement">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
+      <SelectionState runConfigName="HomePageClient">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
       <SelectionState runConfigName="AttendanceManagement">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="AttendanceDetails">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
->>>>>>> 60ff872ec2054195b3b8a68ec54597ce53129a09
     </selectionStates>
   </component>
 </project>

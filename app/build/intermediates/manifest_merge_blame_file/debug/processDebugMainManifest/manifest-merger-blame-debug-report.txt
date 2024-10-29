@@ -9,212 +9,6 @@
 9        android:targetSdkVersion="34" />
 10
 11    <permission
-<<<<<<< HEAD
-11-->[androidx.core:core:1.13.0] C:\Users\Acer\.gradle\caches\8.9\transforms\28ed2e0627fe848260f1c07273d53cd3\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
-12        android:name="com.example.tenpm_hrm.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-12-->[androidx.core:core:1.13.0] C:\Users\Acer\.gradle\caches\8.9\transforms\28ed2e0627fe848260f1c07273d53cd3\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
-13        android:protectionLevel="signature" />
-13-->[androidx.core:core:1.13.0] C:\Users\Acer\.gradle\caches\8.9\transforms\28ed2e0627fe848260f1c07273d53cd3\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
-14
-15    <uses-permission android:name="com.example.tenpm_hrm.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-15-->[androidx.core:core:1.13.0] C:\Users\Acer\.gradle\caches\8.9\transforms\28ed2e0627fe848260f1c07273d53cd3\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
-15-->[androidx.core:core:1.13.0] C:\Users\Acer\.gradle\caches\8.9\transforms\28ed2e0627fe848260f1c07273d53cd3\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
-16
-17    <application
-17-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:5:5-70:19
-18        android:allowBackup="true"
-18-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:6:9-35
-19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-19-->[androidx.core:core:1.13.0] C:\Users\Acer\.gradle\caches\8.9\transforms\28ed2e0627fe848260f1c07273d53cd3\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
-20        android:dataExtractionRules="@xml/data_extraction_rules"
-20-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:7:9-65
-21        android:debuggable="true"
-22        android:extractNativeLibs="false"
-23        android:fullBackupContent="@xml/backup_rules"
-23-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:8:9-54
-24        android:icon="@mipmap/ic_launcher"
-24-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:9:9-43
-25        android:label="@string/app_name"
-25-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:10:9-41
-26        android:roundIcon="@mipmap/ic_launcher_round"
-26-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:11:9-54
-27        android:supportsRtl="true"
-27-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:12:9-35
-28        android:testOnly="true"
-29        android:theme="@style/Theme.TENPM_HRM" >
-29-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:13:9-47
-30        <activity
-30-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:15:9-23:20
-31            android:name="com.example.tenpm_hrm.MainActivity"
-31-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:16:13-41
-32            android:exported="true" >
-32-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:17:13-36
-33            <intent-filter>
-33-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:18:13-22:29
-34                <action android:name="android.intent.action.MAIN" />
-34-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:19:17-69
-34-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:19:25-66
-35
-36                <category android:name="android.intent.category.LAUNCHER" />
-36-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:21:17-77
-36-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:21:27-74
-37            </intent-filter>
-38        </activity>
-39        <activity
-39-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:24:9-32:20
-40            android:name="com.example.tenpm_hrm.RequestManagementClient"
-40-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:13-52
-41            android:exported="true" >
-41-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:26:13-36
-42            <intent-filter>
-42-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:18:13-22:29
-43                <action android:name="android.intent.action.MAIN" />
-43-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:19:17-69
-43-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:19:25-66
-44
-45                <category android:name="android.intent.category.LAUNCHER" />
-45-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:21:17-77
-45-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:21:27-74
-46            </intent-filter>
-47        </activity>
-48        <activity
-48-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:33:9-41:20
-49            android:name="com.example.tenpm_hrm.NewRequest"
-49-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:34:13-39
-50            android:exported="true" >
-50-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:35:13-36
-51            <intent-filter>
-51-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:18:13-22:29
-52                <action android:name="android.intent.action.MAIN" />
-52-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:19:17-69
-52-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:19:25-66
-53
-54                <category android:name="android.intent.category.LAUNCHER" />
-54-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:21:17-77
-54-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:21:27-74
-55            </intent-filter>
-56        </activity>
-57        <activity
-57-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:42:9-50:20
-58            android:name="com.example.tenpm_hrm.RequestManagementAdmin"
-58-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:43:13-51
-59            android:exported="true" >
-59-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:44:13-36
-60            <intent-filter>
-60-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:18:13-22:29
-61                <action android:name="android.intent.action.MAIN" />
-61-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:19:17-69
-61-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:19:25-66
-62
-63                <category android:name="android.intent.category.LAUNCHER" />
-63-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:21:17-77
-63-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:21:27-74
-64            </intent-filter>
-65        </activity>
-66        <activity
-66-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:51:9-59:20
-67            android:name="com.example.tenpm_hrm.AttendanceDetails"
-67-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:52:13-46
-68            android:exported="true" >
-68-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:53:13-36
-69            <intent-filter>
-69-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:18:13-22:29
-70                <action android:name="android.intent.action.MAIN" />
-70-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:19:17-69
-70-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:19:25-66
-71
-72                <category android:name="android.intent.category.LAUNCHER" />
-72-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:21:17-77
-72-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:21:27-74
-73            </intent-filter>
-74        </activity>
-75        <activity
-75-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:60:9-68:20
-76            android:name="com.example.tenpm_hrm.AttendanceManagement"
-76-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:61:13-49
-77            android:exported="true" >
-77-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:62:13-36
-78            <intent-filter>
-78-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:18:13-22:29
-79                <action android:name="android.intent.action.MAIN" />
-79-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:19:17-69
-79-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:19:25-66
-80
-81                <category android:name="android.intent.category.LAUNCHER" />
-81-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:21:17-77
-81-->D:\Android\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:21:27-74
-82            </intent-filter>
-83        </activity>
-84
-85        <provider
-85-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Acer\.gradle\caches\8.9\transforms\d090f98c7f7400fbb2276d576a132930\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
-86            android:name="androidx.startup.InitializationProvider"
-86-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Acer\.gradle\caches\8.9\transforms\d090f98c7f7400fbb2276d576a132930\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
-87            android:authorities="com.example.tenpm_hrm.androidx-startup"
-87-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Acer\.gradle\caches\8.9\transforms\d090f98c7f7400fbb2276d576a132930\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
-88            android:exported="false" >
-88-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Acer\.gradle\caches\8.9\transforms\d090f98c7f7400fbb2276d576a132930\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
-89            <meta-data
-89-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Acer\.gradle\caches\8.9\transforms\d090f98c7f7400fbb2276d576a132930\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
-90                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-90-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Acer\.gradle\caches\8.9\transforms\d090f98c7f7400fbb2276d576a132930\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
-91                android:value="androidx.startup" />
-91-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Acer\.gradle\caches\8.9\transforms\d090f98c7f7400fbb2276d576a132930\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
-92            <meta-data
-92-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Acer\.gradle\caches\8.9\transforms\f805c075234d995bb21171b6dbc7141c\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
-93                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-93-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Acer\.gradle\caches\8.9\transforms\f805c075234d995bb21171b6dbc7141c\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
-94                android:value="androidx.startup" />
-94-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Acer\.gradle\caches\8.9\transforms\f805c075234d995bb21171b6dbc7141c\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
-95            <meta-data
-95-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Acer\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
-96                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-96-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Acer\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
-97                android:value="androidx.startup" />
-97-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Acer\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
-98        </provider>
-99
-100        <receiver
-100-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Acer\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
-101            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-101-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Acer\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
-102            android:directBootAware="false"
-102-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Acer\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
-103            android:enabled="true"
-103-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Acer\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
-104            android:exported="true"
-104-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Acer\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
-105            android:permission="android.permission.DUMP" >
-105-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Acer\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
-106            <intent-filter>
-106-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Acer\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
-107                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-107-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Acer\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
-107-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Acer\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
-108            </intent-filter>
-109            <intent-filter>
-109-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Acer\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
-110                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-110-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Acer\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
-110-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Acer\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
-111            </intent-filter>
-112            <intent-filter>
-112-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Acer\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
-113                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-113-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Acer\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
-113-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Acer\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
-114            </intent-filter>
-115            <intent-filter>
-115-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Acer\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
-116                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-116-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Acer\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
-116-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Acer\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
-117            </intent-filter>
-118        </receiver>
-119    </application>
-120
-121</manifest>
-=======
 11-->[androidx.core:core:1.13.0] C:\Users\DELL\.gradle\caches\8.9\transforms\28ed2e0627fe848260f1c07273d53cd3\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
 12        android:name="com.example.tenpm_hrm.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
 12-->[androidx.core:core:1.13.0] C:\Users\DELL\.gradle\caches\8.9\transforms\28ed2e0627fe848260f1c07273d53cd3\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
@@ -226,344 +20,344 @@
 15-->[androidx.core:core:1.13.0] C:\Users\DELL\.gradle\caches\8.9\transforms\28ed2e0627fe848260f1c07273d53cd3\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
 16
 17    <application
-17-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:5:5-183:19
+17-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:5:5-183:19
 18        android:allowBackup="true"
-18-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:6:9-35
+18-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:6:9-35
 19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 19-->[androidx.core:core:1.13.0] C:\Users\DELL\.gradle\caches\8.9\transforms\28ed2e0627fe848260f1c07273d53cd3\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
 20        android:dataExtractionRules="@xml/data_extraction_rules"
-20-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:7:9-65
+20-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:7:9-65
 21        android:debuggable="true"
 22        android:extractNativeLibs="false"
 23        android:fullBackupContent="@xml/backup_rules"
-23-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:8:9-54
+23-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:8:9-54
 24        android:icon="@mipmap/ic_launcher"
-24-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:9:9-43
+24-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:9:9-43
 25        android:label="@string/app_name"
-25-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:10:9-41
+25-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:10:9-41
 26        android:roundIcon="@mipmap/ic_launcher_round"
-26-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:11:9-54
+26-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:11:9-54
 27        android:supportsRtl="true"
-27-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:12:9-35
+27-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:12:9-35
 28        android:testOnly="true"
 29        android:theme="@style/Theme.TENPM_HRM" >
-29-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:13:9-47
+29-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:13:9-47
 30        <activity
-30-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:15:9-17:40
+30-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:15:9-17:40
 31            android:name="com.example.tenpm_hrm.CreateProject"
-31-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:16:13-42
+31-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:16:13-42
 32            android:exported="false" />
-32-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:17:13-37
+32-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:17:13-37
 33        <activity
-33-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:18:9-20:40
+33-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:18:9-20:40
 34            android:name="com.example.tenpm_hrm.CreateAccount"
-34-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:19:13-42
+34-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:19:13-42
 35            android:exported="false" />
-35-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:20:13-37
+35-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:20:13-37
 36        <activity
-36-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:21:9-29:20
+36-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:21:9-29:20
 37            android:name="com.example.tenpm_hrm.MainActivity"
-37-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:22:13-41
+37-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:22:13-41
 38            android:exported="true" >
-38-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:23:13-36
+38-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:23:13-36
 39            <intent-filter>
-39-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:24:13-28:29
+39-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:24:13-28:29
 40                <action android:name="android.intent.action.MAIN" />
-40-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:17-69
-40-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:25-66
+40-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:17-69
+40-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:25-66
 41
 42                <category android:name="android.intent.category.LAUNCHER" />
-42-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:17-77
-42-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:27-74
+42-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:17-77
+42-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:27-74
 43            </intent-filter>
 44        </activity> <!-- yeucau -->
 45        <activity
-45-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:30:9-38:20
+45-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:30:9-38:20
 46            android:name="com.example.tenpm_hrm.RequestManagementClient"
-46-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:31:13-52
+46-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:31:13-52
 47            android:exported="true" >
-47-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:32:13-36
+47-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:32:13-36
 48            <intent-filter>
-48-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:24:13-28:29
+48-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:24:13-28:29
 49                <action android:name="android.intent.action.MAIN" />
-49-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:17-69
-49-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:25-66
+49-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:17-69
+49-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:25-66
 50
 51                <category android:name="android.intent.category.LAUNCHER" />
-51-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:17-77
-51-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:27-74
+51-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:17-77
+51-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:27-74
 52            </intent-filter>
 53        </activity>
 54        <activity
-54-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:39:9-47:20
+54-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:39:9-47:20
 55            android:name="com.example.tenpm_hrm.NewRequest"
-55-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:40:13-39
+55-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:40:13-39
 56            android:exported="true" >
-56-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:41:13-36
+56-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:41:13-36
 57            <intent-filter>
-57-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:24:13-28:29
+57-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:24:13-28:29
 58                <action android:name="android.intent.action.MAIN" />
-58-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:17-69
-58-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:25-66
+58-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:17-69
+58-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:25-66
 59
 60                <category android:name="android.intent.category.LAUNCHER" />
-60-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:17-77
-60-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:27-74
+60-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:17-77
+60-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:27-74
 61            </intent-filter>
 62        </activity>
 63        <activity
-63-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:48:9-56:20
+63-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:48:9-56:20
 64            android:name="com.example.tenpm_hrm.RequestManagementAdmin"
-64-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:49:13-51
+64-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:49:13-51
 65            android:exported="true" >
-65-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:50:13-36
+65-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:50:13-36
 66            <intent-filter>
-66-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:24:13-28:29
+66-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:24:13-28:29
 67                <action android:name="android.intent.action.MAIN" />
-67-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:17-69
-67-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:25-66
+67-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:17-69
+67-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:25-66
 68
 69                <category android:name="android.intent.category.LAUNCHER" />
-69-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:17-77
-69-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:27-74
+69-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:17-77
+69-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:27-74
 70            </intent-filter>
 71        </activity> <!-- chamcong -->
 72        <activity
-72-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:57:9-65:20
+72-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:57:9-65:20
 73            android:name="com.example.tenpm_hrm.AttendanceDetails"
-73-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:58:13-46
+73-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:58:13-46
 74            android:exported="true" >
-74-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:59:13-36
+74-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:59:13-36
 75            <intent-filter>
-75-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:24:13-28:29
+75-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:24:13-28:29
 76                <action android:name="android.intent.action.MAIN" />
-76-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:17-69
-76-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:25-66
+76-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:17-69
+76-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:25-66
 77
 78                <category android:name="android.intent.category.LAUNCHER" />
-78-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:17-77
-78-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:27-74
+78-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:17-77
+78-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:27-74
 79            </intent-filter>
 80        </activity>
 81        <activity
-81-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:66:9-74:20
+81-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:66:9-74:20
 82            android:name="com.example.tenpm_hrm.AttendanceManagement"
-82-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:67:13-49
+82-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:67:13-49
 83            android:exported="true" >
-83-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:68:13-36
+83-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:68:13-36
 84            <intent-filter>
-84-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:24:13-28:29
+84-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:24:13-28:29
 85                <action android:name="android.intent.action.MAIN" />
-85-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:17-69
-85-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:25-66
+85-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:17-69
+85-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:25-66
 86
 87                <category android:name="android.intent.category.LAUNCHER" />
-87-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:17-77
-87-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:27-74
+87-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:17-77
+87-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:27-74
 88            </intent-filter>
 89        </activity> <!-- phongban -->
 90        <activity
-90-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:75:9-83:20
+90-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:75:9-83:20
 91            android:name="com.example.tenpm_hrm.DepartmentManagement"
-91-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:76:13-49
+91-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:76:13-49
 92            android:exported="true" >
-92-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:77:13-36
+92-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:77:13-36
 93            <intent-filter>
-93-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:24:13-28:29
+93-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:24:13-28:29
 94                <action android:name="android.intent.action.MAIN" />
-94-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:17-69
-94-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:25-66
+94-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:17-69
+94-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:25-66
 95
 96                <category android:name="android.intent.category.LAUNCHER" />
-96-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:17-77
-96-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:27-74
+96-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:17-77
+96-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:27-74
 97            </intent-filter>
 98        </activity>
 99        <activity
-99-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:84:9-92:20
+99-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:84:9-92:20
 100            android:name="com.example.tenpm_hrm.NewDepartment"
-100-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:85:13-42
+100-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:85:13-42
 101            android:exported="true" >
-101-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:86:13-36
+101-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:86:13-36
 102            <intent-filter>
-102-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:24:13-28:29
+102-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:24:13-28:29
 103                <action android:name="android.intent.action.MAIN" />
-103-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:17-69
-103-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:25-66
+103-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:17-69
+103-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:25-66
 104
 105                <category android:name="android.intent.category.LAUNCHER" />
-105-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:17-77
-105-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:27-74
+105-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:17-77
+105-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:27-74
 106            </intent-filter>
 107        </activity> <!-- csvc -->
 108        <activity
-108-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:93:9-101:20
+108-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:93:9-101:20
 109            android:name="com.example.tenpm_hrm.CSVCManagement"
-109-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:94:13-43
+109-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:94:13-43
 110            android:exported="true" >
-110-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:95:13-36
+110-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:95:13-36
 111            <intent-filter>
-111-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:24:13-28:29
+111-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:24:13-28:29
 112                <action android:name="android.intent.action.MAIN" />
-112-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:17-69
-112-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:25-66
+112-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:17-69
+112-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:25-66
 113
 114                <category android:name="android.intent.category.LAUNCHER" />
-114-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:17-77
-114-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:27-74
+114-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:17-77
+114-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:27-74
 115            </intent-filter>
 116        </activity>
 117        <activity
-117-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:102:9-110:20
+117-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:102:9-110:20
 118            android:name="com.example.tenpm_hrm.NewCSVC"
-118-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:103:13-36
+118-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:103:13-36
 119            android:exported="true" >
-119-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:104:13-36
+119-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:104:13-36
 120            <intent-filter>
-120-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:24:13-28:29
+120-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:24:13-28:29
 121                <action android:name="android.intent.action.MAIN" />
-121-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:17-69
-121-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:25-66
+121-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:17-69
+121-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:25-66
 122
 123                <category android:name="android.intent.category.LAUNCHER" />
-123-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:17-77
-123-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:27-74
+123-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:17-77
+123-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:27-74
 124            </intent-filter>
 125        </activity> <!-- taikhoan -->
 126        <activity
-126-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:111:9-119:20
+126-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:111:9-119:20
 127            android:name="com.example.tenpm_hrm.AccountManagement"
-127-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:112:13-46
+127-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:112:13-46
 128            android:exported="true" >
-128-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:113:13-36
+128-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:113:13-36
 129            <intent-filter>
-129-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:24:13-28:29
+129-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:24:13-28:29
 130                <action android:name="android.intent.action.MAIN" />
-130-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:17-69
-130-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:25-66
+130-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:17-69
+130-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:25-66
 131
 132                <category android:name="android.intent.category.LAUNCHER" />
-132-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:17-77
-132-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:27-74
+132-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:17-77
+132-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:27-74
 133            </intent-filter>
 134        </activity>
 135        <activity
-135-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:120:9-128:20
+135-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:120:9-128:20
 136            android:name="com.example.tenpm_hrm.NewAccount"
-136-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:121:13-39
+136-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:121:13-39
 137            android:exported="true" >
-137-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:122:13-36
+137-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:122:13-36
 138            <intent-filter>
-138-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:24:13-28:29
+138-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:24:13-28:29
 139                <action android:name="android.intent.action.MAIN" />
-139-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:17-69
-139-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:25-66
+139-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:17-69
+139-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:25-66
 140
 141                <category android:name="android.intent.category.LAUNCHER" />
-141-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:17-77
-141-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:27-74
+141-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:17-77
+141-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:27-74
 142            </intent-filter>
 143        </activity> <!-- nhanvien -->
 144        <activity
-144-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:129:9-137:20
+144-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:129:9-137:20
 145            android:name="com.example.tenpm_hrm.EmployeeManagement"
-145-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:130:13-47
+145-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:130:13-47
 146            android:exported="true" >
-146-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:131:13-36
+146-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:131:13-36
 147            <intent-filter>
-147-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:24:13-28:29
+147-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:24:13-28:29
 148                <action android:name="android.intent.action.MAIN" />
-148-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:17-69
-148-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:25-66
+148-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:17-69
+148-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:25-66
 149
 150                <category android:name="android.intent.category.LAUNCHER" />
-150-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:17-77
-150-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:27-74
+150-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:17-77
+150-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:27-74
 151            </intent-filter>
 152        </activity>
 153        <activity
-153-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:138:9-146:20
+153-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:138:9-146:20
 154            android:name="com.example.tenpm_hrm.NewEmployee"
-154-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:139:13-40
+154-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:139:13-40
 155            android:exported="true" >
-155-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:140:13-36
+155-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:140:13-36
 156            <intent-filter>
-156-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:24:13-28:29
+156-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:24:13-28:29
 157                <action android:name="android.intent.action.MAIN" />
-157-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:17-69
-157-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:25-66
+157-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:17-69
+157-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:25-66
 158
 159                <category android:name="android.intent.category.LAUNCHER" />
-159-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:17-77
-159-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:27-74
+159-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:17-77
+159-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:27-74
 160            </intent-filter>
 161        </activity> <!-- homepage -->
 162        <activity
-162-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:147:9-155:20
+162-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:147:9-155:20
 163            android:name="com.example.tenpm_hrm.HomePageClient"
-163-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:148:13-43
+163-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:148:13-43
 164            android:exported="true" >
-164-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:149:13-36
+164-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:149:13-36
 165            <intent-filter>
-165-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:24:13-28:29
+165-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:24:13-28:29
 166                <action android:name="android.intent.action.MAIN" />
-166-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:17-69
-166-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:25-66
+166-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:17-69
+166-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:25-66
 167
 168                <category android:name="android.intent.category.LAUNCHER" />
-168-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:17-77
-168-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:27-74
+168-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:17-77
+168-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:27-74
 169            </intent-filter>
 170        </activity>
 171        <activity
-171-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:156:9-164:20
+171-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:156:9-164:20
 172            android:name="com.example.tenpm_hrm.HomepageAdmin"
-172-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:157:13-42
+172-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:157:13-42
 173            android:exported="true" >
-173-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:158:13-36
+173-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:158:13-36
 174            <intent-filter>
-174-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:24:13-28:29
+174-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:24:13-28:29
 175                <action android:name="android.intent.action.MAIN" />
-175-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:17-69
-175-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:25-66
+175-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:17-69
+175-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:25-66
 176
 177                <category android:name="android.intent.category.LAUNCHER" />
-177-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:17-77
-177-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:27-74
+177-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:17-77
+177-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:27-74
 178            </intent-filter>
 179        </activity>
 180        <activity
-180-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:165:9-173:20
+180-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:165:9-173:20
 181            android:name="com.example.tenpm_hrm.ProjectManagement"
-181-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:166:13-46
+181-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:166:13-46
 182            android:exported="true" >
-182-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:167:13-36
+182-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:167:13-36
 183            <intent-filter>
-183-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:24:13-28:29
+183-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:24:13-28:29
 184                <action android:name="android.intent.action.MAIN" />
-184-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:17-69
-184-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:25-66
+184-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:17-69
+184-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:25-66
 185
 186                <category android:name="android.intent.category.LAUNCHER" />
-186-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:17-77
-186-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:27-74
+186-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:17-77
+186-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:27-74
 187            </intent-filter>
 188        </activity> <!-- login -->
 189        <activity
-189-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:174:9-182:20
+189-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:174:9-182:20
 190            android:name="com.example.tenpm_hrm.Login"
-190-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:175:13-34
+190-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:175:13-34
 191            android:exported="true" >
-191-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:176:13-36
+191-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:176:13-36
 192            <intent-filter>
-192-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:24:13-28:29
+192-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:24:13-28:29
 193                <action android:name="android.intent.action.MAIN" />
-193-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:17-69
-193-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:25:25-66
+193-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:17-69
+193-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:25:25-66
 194
 195                <category android:name="android.intent.category.LAUNCHER" />
-195-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:17-77
-195-->D:\Desktop\TENPM_HRM-mobile\app\src\main\AndroidManifest.xml:27:27-74
+195-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:17-77
+195-->D:\thucHanhMobi\projectMobi\app\src\main\AndroidManifest.xml:27:27-74
 196            </intent-filter>
 197        </activity>
 198
@@ -635,4 +429,3 @@
 233    </application>
 234
 235</manifest>
->>>>>>> 60ff872ec2054195b3b8a68ec54597ce53129a09

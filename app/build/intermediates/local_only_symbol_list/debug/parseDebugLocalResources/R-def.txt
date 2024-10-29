@@ -33,10 +33,7 @@ drawable hr
 drawable ic_avatar_placeholder
 drawable ic_launcher_background
 drawable ic_launcher_foreground
-<<<<<<< HEAD
-=======
 drawable img_upload
->>>>>>> 60ff872ec2054195b3b8a68ec54597ce53129a09
 drawable it
 drawable item_account
 drawable left_arrow
@@ -89,6 +86,7 @@ id btnProjectAdd
 id btn_new_request
 id btn_pending_requests
 id button
+id button2
 id buttonAddProject
 id buttonAttendanceCheck
 id buttonAttendanceCheckInOut
@@ -287,20 +285,12 @@ layout create_account
 layout create_csvc_admin
 layout create_department_admin
 layout create_employee
-<<<<<<< HEAD
-=======
 layout create_project
->>>>>>> 60ff872ec2054195b3b8a68ec54597ce53129a09
 layout create_request_client
 layout csvc_management_admin
 layout department_management
+layout employee_information
 layout employee_management
-<<<<<<< HEAD
-layout homepage
-layout item_calendar
-layout item_check_in_out
-layout item_department
-=======
 layout homepage_admin
 layout homepage_client
 layout item_account
@@ -308,7 +298,6 @@ layout item_calendar
 layout item_check_in_out
 layout item_department
 layout item_project
->>>>>>> 60ff872ec2054195b3b8a68ec54597ce53129a09
 layout login
 layout project
 layout request_item

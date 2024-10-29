@@ -1,8 +1,8 @@
-#Tue Oct 29 12:29:22 ICT 2024
-base.0=D\:\\Desktop\\TENPM_HRM-mobile\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=D\:\\Desktop\\TENPM_HRM-mobile\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=D\:\\Desktop\\TENPM_HRM-mobile\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
-base.3=D\:\\Desktop\\TENPM_HRM-mobile\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
+#Wed Oct 30 00:17:01 ICT 2024
+base.0=D\:\\thucHanhMobi\\projectMobi\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=D\:\\thucHanhMobi\\projectMobi\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=D\:\\thucHanhMobi\\projectMobi\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
+base.3=D\:\\thucHanhMobi\\projectMobi\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=13/classes.dex
