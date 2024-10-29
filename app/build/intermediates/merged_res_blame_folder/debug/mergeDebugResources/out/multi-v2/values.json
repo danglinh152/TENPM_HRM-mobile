@@ -42,6 +42,25 @@
                     }
                 },
                 {
+                    "source": "D:\\Desktop\\TENPM_HRM-mobile\\app\\src\\main\\res\\values\\roundedCornersImageView.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "214"
+                    },
+                    "to": {
+                        "startLines": "9253",
+                        "startColumns": "4",
+                        "startOffsets": "642009",
+                        "endLines": "9256",
+                        "endColumns": "12",
+                        "endOffsets": "642163"
+                    }
+                },
+                {
                     "source": "C:\\Users\\DELL\\.gradle\\caches\\8.9\\transforms\\dac7fe969ecf54aa5965619b9d41b40f\\transformed\\coordinatorlayout-1.1.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,6,16",
@@ -95,25 +114,6 @@
                     }
                 },
                 {
-                    "source": "D:\\thucHanhMobi\\projectMobi\\app\\src\\main\\res\\values\\roundedCornersImageView.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "209"
-                    },
-                    "to": {
-                        "startLines": "9253",
-                        "startColumns": "4",
-                        "startOffsets": "642009",
-                        "endLines": "9256",
-                        "endColumns": "12",
-                        "endOffsets": "642163"
-                    }
-                },
-                {
                     "source": "C:\\Users\\DELL\\.gradle\\caches\\8.9\\transforms\\994b3966701f2c02af1de491bbe579d1\\transformed\\lifecycle-viewmodel-2.6.2\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -150,23 +150,6 @@
                     }
                 },
                 {
-                    "source": "D:\\thucHanhMobi\\projectMobi\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "1,2,3",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "16,57,105",
-                        "endColumns": "40,47,50",
-                        "endOffsets": "52,100,151"
-                    },
-                    "to": {
-                        "startLines": "1981,1983,2008",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "131127,131318,133971",
-                        "endColumns": "40,47,50",
-                        "endOffsets": "131163,131361,134017"
-                    }
-                },
-                {
                     "source": "C:\\Users\\DELL\\.gradle\\caches\\8.9\\transforms\\1d4afb8f065c6ba0474c0601422b5a3f\\transformed\\fragment-1.5.4\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,10",
@@ -183,6 +166,23 @@
                         "endLines": "1807,1840,1880,11488,11492",
                         "endColumns": "56,64,63,24,24",
                         "endOffsets": "120575,122270,124337,724740,724889"
+                    }
+                },
+                {
+                    "source": "D:\\Desktop\\TENPM_HRM-mobile\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "1,2,3",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "17,59,108",
+                        "endColumns": "40,47,50",
+                        "endOffsets": "53,102,154"
+                    },
+                    "to": {
+                        "startLines": "1981,1983,2008",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "131127,131318,133971",
+                        "endColumns": "40,47,50",
+                        "endOffsets": "131163,131361,134017"
                     }
                 },
                 {
@@ -241,20 +241,22 @@
                     }
                 },
                 {
-                    "source": "D:\\thucHanhMobi\\projectMobi\\app\\src\\main\\res\\values\\colors.xml",
+                    "source": "D:\\Desktop\\TENPM_HRM-mobile\\app\\src\\main\\res\\values\\themes.xml",
                     "from": {
-                        "startLines": "4,2,3,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "139,55,91,181",
-                        "endColumns": "41,35,47,41",
-                        "endOffsets": "176,86,134,218"
+                        "startLines": "2,7",
+                        "startColumns": "4,4",
+                        "startOffsets": "102,331",
+                        "endLines": "5,7",
+                        "endColumns": "12,66",
+                        "endOffsets": "323,393"
                     },
                     "to": {
-                        "startLines": "641,699,941,962",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "32859,36891,55165,56619",
-                        "endColumns": "41,35,47,41",
-                        "endOffsets": "32896,36922,55208,56656"
+                        "startLines": "2558,6546",
+                        "startColumns": "4,4",
+                        "startOffsets": "179800,459472",
+                        "endLines": "2561,6546",
+                        "endColumns": "12,65",
+                        "endOffsets": "179912,459533"
                     }
                 },
                 {
@@ -349,22 +351,20 @@
                     }
                 },
                 {
-                    "source": "D:\\thucHanhMobi\\projectMobi\\app\\src\\main\\res\\values\\themes.xml",
+                    "source": "D:\\Desktop\\TENPM_HRM-mobile\\app\\src\\main\\res\\values\\colors.xml",
                     "from": {
-                        "startLines": "2,7",
-                        "startColumns": "4,4",
-                        "startOffsets": "100,324",
-                        "endLines": "5,7",
-                        "endColumns": "12,66",
-                        "endOffsets": "318,386"
+                        "startLines": "4,2,3,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "143,57,94,186",
+                        "endColumns": "41,35,47,41",
+                        "endOffsets": "180,88,137,223"
                     },
                     "to": {
-                        "startLines": "2558,6546",
-                        "startColumns": "4,4",
-                        "startOffsets": "179800,459472",
-                        "endLines": "2561,6546",
-                        "endColumns": "12,65",
-                        "endOffsets": "179912,459533"
+                        "startLines": "641,699,941,962",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "32859,36891,55165,56619",
+                        "endColumns": "41,35,47,41",
+                        "endOffsets": "32896,36922,55208,56656"
                     }
                 },
                 {

@@ -13,16 +13,20 @@
         android:theme="@style/Theme.TENPM_HRM"
         tools:targetApi="31">
         <activity
+            android:name=".CreateProject"
+            android:exported="false" />
+        <activity
+            android:name=".CreateAccount"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-<!--        yeucau-->
-
+        </activity> <!-- yeucau -->
         <activity
             android:name=".RequestManagementClient"
             android:exported="true">
@@ -49,10 +53,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-<!--        chamcong -->
-
+        </activity> <!-- chamcong -->
         <activity
             android:name=".AttendanceDetails"
             android:exported="true">
@@ -70,9 +71,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-<!--    phongban    -->
+        </activity> <!-- phongban -->
         <activity
             android:name=".DepartmentManagement"
             android:exported="true">
@@ -90,9 +89,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-<!--    csvc    -->
+        </activity> <!-- csvc -->
         <activity
             android:name=".CSVCManagement"
             android:exported="true">
@@ -110,9 +107,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-<!--    taikhoan    -->
+        </activity> <!-- taikhoan -->
         <activity
             android:name=".AccountManagement"
             android:exported="true">
@@ -130,10 +125,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-<!--        nhanvien-->
-
+        </activity> <!-- nhanvien -->
         <activity
             android:name=".EmployeeManagement"
             android:exported="true">
@@ -151,47 +143,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-<!--        project -->
-        <activity
-            android:name=".ProjectManagement"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".NewProject"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".UpdateProject"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-<!--        homepage-->
-
-        <activity
-            android:name=".HomepageAdmin"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
+        </activity> <!-- homepage -->
         <activity
             android:name=".HomePageClient"
             android:exported="true">
@@ -201,8 +153,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".HomepageAdmin"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-<!--        login-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ProjectManagement"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- login -->
         <activity
             android:name=".Login"
             android:exported="true">
@@ -212,7 +180,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
