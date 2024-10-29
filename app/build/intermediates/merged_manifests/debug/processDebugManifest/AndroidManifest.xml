@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="24"
+        android:minSdkVersion="26"
         android:targetSdkVersion="34" />
 
     <permission
@@ -28,6 +28,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.TENPM_HRM" >
         <activity
+            android:name="com.example.tenpm_hrm.CreateProject"
+            android:exported="false" />
+        <activity
+            android:name="com.example.tenpm_hrm.CreateAccount"
+            android:exported="false" />
+        <activity
             android:name="com.example.tenpm_hrm.MainActivity"
             android:exported="true" >
             <intent-filter>
@@ -35,10 +41,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- yeucau -->
-
+        </activity> <!-- yeucau -->
         <activity
             android:name="com.example.tenpm_hrm.RequestManagementClient"
             android:exported="true" >
@@ -65,10 +68,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- chamcong -->
-
+        </activity> <!-- chamcong -->
         <activity
             android:name="com.example.tenpm_hrm.AttendanceDetails"
             android:exported="true" >
@@ -86,9 +86,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- phongban -->
+        </activity> <!-- phongban -->
         <activity
             android:name="com.example.tenpm_hrm.DepartmentManagement"
             android:exported="true" >
@@ -106,9 +104,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- csvc -->
+        </activity> <!-- csvc -->
         <activity
             android:name="com.example.tenpm_hrm.CSVCManagement"
             android:exported="true" >
@@ -126,9 +122,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- taikhoan -->
+        </activity> <!-- taikhoan -->
         <activity
             android:name="com.example.tenpm_hrm.AccountManagement"
             android:exported="true" >
@@ -146,10 +140,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- nhanvien -->
-
+        </activity> <!-- nhanvien -->
         <activity
             android:name="com.example.tenpm_hrm.EmployeeManagement"
             android:exported="true" >
@@ -167,10 +158,9 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!-- project -->
+        </activity> <!-- homepage -->
         <activity
-            android:name="com.example.tenpm_hrm.ProjectManagement"
+            android:name="com.example.tenpm_hrm.HomePageClient"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -178,26 +168,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.example.tenpm_hrm.NewProject"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.tenpm_hrm.UpdateProject"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <!-- homepage -->
-
         <activity
             android:name="com.example.tenpm_hrm.HomepageAdmin"
             android:exported="true" >
@@ -208,16 +178,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.tenpm_hrm.HomePageClient"
+            android:name="com.example.tenpm_hrm.ProjectManagement"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- login -->
+        </activity> <!-- login -->
         <activity
             android:name="com.example.tenpm_hrm.Login"
             android:exported="true" >

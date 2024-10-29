@@ -11,13 +11,10 @@
       <SelectionState runConfigName="ProjectManagement">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="CSVCManagement">
+      <SelectionState runConfigName="AttendanceManagement">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="DepartmentManagement">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
-      <SelectionState runConfigName="HomePageClient">
+      <SelectionState runConfigName="AttendanceDetails">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>
