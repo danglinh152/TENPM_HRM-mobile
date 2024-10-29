@@ -10,7 +10,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 public class Homepage extends AppCompatActivity {
+    private CardView cardEmployee;
+    private CardView cardDepartment;
+    private CardView cardAttendance;
+    private CardView cardFacilities;
+    private CardView cardProject;
     private CardView cardRequest;
+    private CardView cardAccount;
     private ProgressBar progressBar; // Add a ProgressBar for better UX
 
     @Override
@@ -20,6 +26,12 @@ public class Homepage extends AppCompatActivity {
         setContentView(R.layout.homepage);
 
         cardRequest = findViewById(R.id.cardRequest);
+        cardEmployee = findViewById(R.id.cardEmployee);
+        cardDepartment = findViewById(R.id.cardDepartment);
+        cardAttendance = findViewById(R.id.cardAttendance);
+        cardFacilities = findViewById(R.id.cardFacilities);
+        cardProject = findViewById(R.id.cardProject);
+        cardAccount = findViewById(R.id.cardAccount);
 //        progressBar = findViewById(R.id.progressBar);
 
         cardRequest.setOnClickListener(new View.OnClickListener() {
