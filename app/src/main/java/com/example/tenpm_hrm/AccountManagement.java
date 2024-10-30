@@ -14,6 +14,8 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import models.AccountItem;
+
 public class AccountManagement extends AppCompatActivity {
 
     @Override
@@ -26,7 +28,7 @@ public class AccountManagement extends AppCompatActivity {
         addAccountBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AccountManagement.this, CreateAccount.class);
+                Intent intent = new Intent(AccountManagement.this, NewAccount.class);
                 startActivity(intent);
             }
         });

@@ -16,16 +16,6 @@
         android:layout_height="110dp">
 
 
-        <ImageView
-            android:id="@+id/img_arrow"
-            android:layout_width="25dp"
-            android:layout_height="20dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="15dp"
-            app:srcCompat="@drawable/arrow" />
-
         <TextView
             android:id="@+id/tv_requests"
             android:layout_width="200dp"
@@ -64,10 +54,11 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                app:cornerRadius="5dp"
+
                 android:backgroundTint="#5C63D6"
                 android:text="Duyệt Tất Cả Các Yêu Cầu"
-                android:textSize="15sp"
-                app:cornerRadius="50dp" />
+                android:textSize="15sp"/>
 
         </LinearLayout>
 

@@ -20,14 +20,14 @@ public class NewRequest extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.create_request_client);
 
-        img_arrow = findViewById(R.id.img_arrow);
-
-        img_arrow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+//        img_arrow = findViewById(R.id.img_arrow);
+//
+//        img_arrow.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                finish();
+//            }
+//        });
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
