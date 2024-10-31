@@ -13,7 +13,7 @@ import com.example.tenpm_hrm.R;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class CalendarRecycleViewAdapter extends RecyclerView.Adapter<CalendarRecycleViewAdapter.ViewHolder> {
+public class CalendarRecycleViewAdapterAdmin extends RecyclerView.Adapter<CalendarRecycleViewAdapterAdmin.ViewHolder> {
 
     private final ArrayList<String> daysOfMonth;
     private final OnItemListener onItemListener;
@@ -21,7 +21,7 @@ public class CalendarRecycleViewAdapter extends RecyclerView.Adapter<CalendarRec
     private final int displayedYear;
     private final LocalDate currentDate;
 
-    public CalendarRecycleViewAdapter(ArrayList<String> daysOfMonth, OnItemListener onItemListener, int displayedMonth, int displayedYear) {
+    public CalendarRecycleViewAdapterAdmin(ArrayList<String> daysOfMonth, OnItemListener onItemListener, int displayedMonth, int displayedYear) {
         this.daysOfMonth = daysOfMonth;
         this.onItemListener = onItemListener;
         this.currentDate = LocalDate.now();
@@ -50,21 +50,8 @@ public class CalendarRecycleViewAdapter extends RecyclerView.Adapter<CalendarRec
                     currentDate.getMonthValue() == displayedMonth &&
                     currentDate.getYear() == displayedYear) {
                 holder.dayOfMonth.setBackgroundResource(R.drawable.gray_circle);
-            } else if (position == 22 || position == 17 || position == 15 ) {
-                holder.dayOfMonth.setBackgroundResource(R.drawable.red_circle);
-            }
-            else if (position == 10 || position == 13 ) {
-                holder.dayOfMonth.setBackgroundResource(R.drawable.blue_circle);
-            }
-            else if (position == 9 ) {
-                holder.dayOfMonth.setBackgroundResource(R.drawable.yellow_circle);
             }
 
-            else {
-                holder.dayOfMonth.setBackgroundResource(R.drawable.green_circle);
-            }
-        } else {
-            holder.dayOfMonth.setBackground(null);
         }
     }
 
@@ -79,7 +66,7 @@ public class CalendarRecycleViewAdapter extends RecyclerView.Adapter<CalendarRec
         private final TextView dayOfMonth;
         private final OnItemListener onItemListener;
 
-        public ViewHolder(@NonNull View itemView, CalendarRecycleViewAdapter.OnItemListener onItemListener) {
+        public ViewHolder(@NonNull View itemView, CalendarRecycleViewAdapterAdmin.OnItemListener onItemListener) {
             super(itemView);
             dayOfMonth = itemView.findViewById(R.id.item_calendar);
             this.onItemListener = onItemListener;
