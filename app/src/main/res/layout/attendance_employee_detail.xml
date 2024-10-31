@@ -25,7 +25,7 @@
                 android:layout_weight="1"
                 android:text="@string/back"
                 android:textColor="@color/primary_color"
-                android:background="@null"
+                android:background="@android:color/transparent"
                 android:textStyle="bold"
                 android:onClick="prevMonthAction"
                 android:textSize="20sp"/>
@@ -46,7 +46,7 @@
                 android:layout_weight="1"
                 android:text="@string/forward"
                 android:textColor="@color/primary_color"
-                android:background="@null"
+                android:background="@android:color/transparent"
                 android:textStyle="bold"
                 android:onClick="nextMonthAction"
                 android:textSize="20sp"/>
@@ -131,7 +131,7 @@
         <RelativeLayout
             android:layout_width="360dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="60dp"
             android:padding="10dp"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/rounded_corner_background">
@@ -263,6 +263,7 @@
         android:paddingRight="40dp"
         android:paddingBottom="20dp"
         android:text="Chấm công"
+        android:textColor="@color/white"
         android:textSize="28sp"
         android:backgroundTint="#5C63D6"
         app:cornerRadius="15dp"
