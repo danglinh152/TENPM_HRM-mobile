@@ -1,6 +1,9 @@
 package com.example.tenpm_hrm;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +25,8 @@ public class AttendanceDetails extends AppCompatActivity implements CalendarRecy
     private RecyclerView rvCalendar;
     private LocalDate selectedDate;
 
+    private Button buttonAttendanceCheckInOut;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +35,15 @@ public class AttendanceDetails extends AppCompatActivity implements CalendarRecy
 
         rvCalendar = findViewById(R.id.rvCalendar);
         tvMonthYear = findViewById(R.id.tvMonthYear);
+        buttonAttendanceCheckInOut = findViewById(R.id.buttonAttendanceCheckInOut);
+
+        buttonAttendanceCheckInOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AttendanceDetails.this, Checkinout.class);
+                startActivity(intent);
+            }
+        });
 
         selectedDate = LocalDate.now();
         setTvMonthYear();

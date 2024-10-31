@@ -66,7 +66,7 @@ public class HomePageClient extends AppCompatActivity {
 //                progressBar.setVisibility(View.VISIBLE);
 
                 // Start the new activity
-                Intent newRequestIntent = new Intent(HomePageClient.this, AttendanceManagement.class);
+                Intent newRequestIntent = new Intent(HomePageClient.this, AttendanceDetails.class);
                 startActivity(newRequestIntent);
 
                 // Optionally hide the ProgressBar after a short delay

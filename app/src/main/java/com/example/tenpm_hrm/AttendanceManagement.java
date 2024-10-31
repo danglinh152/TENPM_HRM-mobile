@@ -36,14 +36,7 @@ public class AttendanceManagement extends AppCompatActivity implements CalendarR
         selectedDate = LocalDate.now();
         setTvMonthYear();
 
-        ImageView ivEmployee1Detail = findViewById(R.id.ivEmployee1Detail);
-        ivEmployee1Detail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(AttendanceManagement.this, AttendanceDetails.class);
-                startActivity(intent);
-            }
-        });
+
     }
 
     private String monthYearFromDate(LocalDate selectedDate) {
