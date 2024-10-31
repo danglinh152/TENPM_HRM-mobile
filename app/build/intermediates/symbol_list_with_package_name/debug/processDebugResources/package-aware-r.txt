@@ -2997,6 +2997,7 @@ drawable baseline_notifications_24
 drawable baseline_settings_24
 drawable bell
 drawable bg
+drawable blue_circle
 drawable blue_rectangle
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -3024,6 +3025,7 @@ drawable ellipse_4
 drawable ellipse_5
 drawable employee
 drawable employee_type_shape
+drawable gray_circle
 drawable green_circle
 drawable group_98
 drawable half_circle_blue
@@ -3146,6 +3148,7 @@ drawable rb_7019
 drawable rb_739
 drawable rectangle
 drawable rectangle_item
+drawable red_circle
 drawable request_img
 drawable rounded_corner_background
 drawable sale
@@ -3157,6 +3160,7 @@ drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable x_img
+drawable yellow_circle
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -3447,6 +3451,7 @@ id imageView12
 id imageView13
 id imageView14
 id imageView15
+id imageView16
 id imageView2
 id imageView3
 id imageView4
