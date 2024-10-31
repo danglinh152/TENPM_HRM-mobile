@@ -69,7 +69,6 @@
             android:layout_weight="1"
             android:layout_marginStart="20dp"
             android:queryHint="Search employee"
-            android:background="@drawable/x_img"
             android:layout_gravity="center_vertical"/>
 
         <!-- Add employee button -->

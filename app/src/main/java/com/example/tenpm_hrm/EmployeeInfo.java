@@ -1,12 +1,17 @@
 package com.example.tenpm_hrm;
 
 import android.os.Bundle;
+
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class CreateProject extends AppCompatActivity {
+public class EmployeeInfo extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.create_project);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.employee_information);
+
     }
 }

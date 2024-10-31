@@ -38,12 +38,14 @@ drawable it
 drawable item_account
 drawable left_arrow
 drawable list
+drawable logo
 drawable mail_img
 drawable management_img
 drawable manager_type_shape
 drawable marketing
 drawable menu
 drawable nav
+drawable project
 drawable rb_18771
 drawable rb_2148823073
 drawable rb_2148866842

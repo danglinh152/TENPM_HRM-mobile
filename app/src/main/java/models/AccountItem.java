@@ -1,4 +1,4 @@
-package com.example.tenpm_hrm;
+package models;
 
 public class AccountItem {
     private String employeeName;
