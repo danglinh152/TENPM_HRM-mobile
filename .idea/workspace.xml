@@ -152,17 +152,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd0901ee-3f38-4d02-95f4-11fe2594751f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/processDebugResources/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/processDebugResources/R.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/create_employee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/create_employee.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/create_project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/create_project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/department_management.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/department_management.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/request_management_admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/request_management_admin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/update_project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/update_project.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,7 +248,7 @@
       <recent name="com.example.tenpm_hrm" />
     </key>
   </component>
-  <component name="RunManager" selected="Android App.UpdateProject">
+  <component name="RunManager" selected="Android App.HomePageClient">
     <configuration name="AttendanceDetails" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false" temporary="true">
       <module name="TENPM_HRM.app.main" />
       <option name="DEPLOY" value="true" />
@@ -668,9 +659,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Android App.UpdateProject" />
-        <item itemvalue="Android App.Homepage" />
         <item itemvalue="Android App.HomePageClient" />
+        <item itemvalue="Android App.Homepage" />
+        <item itemvalue="Android App.UpdateProject" />
         <item itemvalue="Android App.AttendanceManagement" />
         <item itemvalue="Android App.AttendanceDetails" />
       </list>

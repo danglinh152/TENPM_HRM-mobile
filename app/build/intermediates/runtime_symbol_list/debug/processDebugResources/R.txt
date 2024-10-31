@@ -3455,7 +3455,6 @@ int id imageView7 0x7f080127
 int id imageView8 0x7f080128
 int id imageView9 0x7f080129
 int id imgSetting 0x7f08012a
-int id img_arrow 0x7f08012b
 int id img_searchbox 0x7f08012c
 int id immediateStop 0x7f08012d
 int id included 0x7f08012e

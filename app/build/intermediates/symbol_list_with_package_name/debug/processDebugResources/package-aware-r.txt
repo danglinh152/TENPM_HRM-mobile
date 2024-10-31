@@ -3456,7 +3456,6 @@ id imageView7
 id imageView8
 id imageView9
 id imgSetting
-id img_arrow
 id img_searchbox
 id immediateStop
 id included
