@@ -8,13 +8,13 @@
       <SelectionState runConfigName="Homepage">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="ProjectManagement">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
       <SelectionState runConfigName="HomePageClient">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
       <SelectionState runConfigName="AttendanceManagement">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
+      <SelectionState runConfigName="UpdateProject">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>

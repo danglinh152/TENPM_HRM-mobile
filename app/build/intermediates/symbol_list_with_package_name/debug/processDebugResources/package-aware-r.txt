@@ -3055,6 +3055,7 @@ drawable it
 drawable item_account
 drawable left_arrow
 drawable list
+drawable logo
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
 drawable m3_bottom_sheet_drag_handle
@@ -3133,6 +3134,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable project
 drawable rb_18771
 drawable rb_2148823073
 drawable rb_2148866842

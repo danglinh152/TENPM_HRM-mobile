@@ -47,7 +47,7 @@
         android:layout_marginRight="20dp"
         android:layout_alignBottom="@id/rlHeaderContainer"
         android:layout_alignEnd="@id/rlHeaderContainer"
-        app:srcCompat="@drawable/x_img" />
+        app:srcCompat="@drawable/project" />
 
     <TextView
         android:id="@+id/tvLabel"

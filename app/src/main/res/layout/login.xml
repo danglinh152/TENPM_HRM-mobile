@@ -138,13 +138,13 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="81dp"
-        android:layout_height="66dp"
+        android:layout_width="139dp"
+        android:layout_height="99dp"
         android:layout_marginTop="184dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/group_98" />
+        app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/textView2"

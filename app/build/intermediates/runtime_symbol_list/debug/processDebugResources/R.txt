@@ -3054,6 +3054,7 @@ int drawable it 0x7f0700b7
 int drawable item_account 0x7f0700b8
 int drawable left_arrow 0x7f0700b9
 int drawable list 0x7f0700ba
+int drawable logo 0x7f070120
 int drawable m3_avd_hide_password 0x7f0700bb
 int drawable m3_avd_show_password 0x7f0700bc
 int drawable m3_bottom_sheet_drag_handle 0x7f0700bd
@@ -3132,6 +3133,7 @@ int drawable notification_template_icon_bg 0x7f070105
 int drawable notification_template_icon_low_bg 0x7f070106
 int drawable notification_tile_bg 0x7f070107
 int drawable notify_panel_notification_icon_bg 0x7f070108
+int drawable project 0x7f070121
 int drawable rb_18771 0x7f070109
 int drawable rb_2148823073 0x7f07010a
 int drawable rb_2148866842 0x7f07010b
