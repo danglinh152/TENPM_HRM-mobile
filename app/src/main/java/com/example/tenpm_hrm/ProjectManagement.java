@@ -56,6 +56,10 @@ public class ProjectManagement extends AppCompatActivity {
         tvProjectName.setText(project.getName());
         tvProjectParticipant.setText(project.getParticipant());
         tvProjectStatus.setText(project.getStatus());
+        if (project.getStatus() == "Hoàn thành") {
+            tvProjectStatus.setBackgroundResource(R.drawable.employee_type_shape);
+            tvProjectStatus.setTextColor(getResources().getColor(R.color.green));
+        }
 
         ivProjectDelete.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1422,6 +1422,7 @@ int color error_color_material_light 0x7f05005b
 int color foreground_material_dark 0x7f05005c
 int color foreground_material_light 0x7f05005d
 int color gray 0x7f05005e
+int color green 0x7f050309
 int color highlighted_text_material_dark 0x7f05005f
 int color highlighted_text_material_light 0x7f050060
 int color m3_appbar_overlay_color 0x7f050061
@@ -3652,6 +3653,7 @@ int id profile_image 0x7f0801e8
 int id progress_circular 0x7f0801e9
 int id progress_horizontal 0x7f0801ea
 int id projectContainer 0x7f0801eb
+int id projectContainerInformation 0x7f0802cf
 int id quantity 0x7f0801ec
 int id quantity2 0x7f0801ed
 int id quantity3 0x7f0801ee

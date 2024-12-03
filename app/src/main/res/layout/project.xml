@@ -76,10 +76,13 @@
         android:layout_width="360dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/ivProjectSearch"
-        android:padding="10dp"
+        android:padding="15dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/rounded_corner_background"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:showDividers="none"
+        android:divider="@android:color/transparent"
+        android:dividerPadding="10dp">
     </LinearLayout>
 
 </RelativeLayout>

@@ -17,9 +17,9 @@ import java.time.YearMonth;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
-import customlistview.CalendarRecycleViewAdapter;
+import customlistview.CalendarRecycleViewAdapterClient;
 
-public class AttendanceDetails extends AppCompatActivity implements CalendarRecycleViewAdapter.OnItemListener {
+public class AttendanceDetails extends AppCompatActivity implements CalendarRecycleViewAdapterClient.OnItemListener {
 
     private TextView tvMonthYear;
     private RecyclerView rvCalendar;
@@ -77,9 +77,9 @@ public class AttendanceDetails extends AppCompatActivity implements CalendarRecy
         tvMonthYear.setText(monthYearFromDate(selectedDate));
         ArrayList<String> daysInMonth = daysInMonthArray(selectedDate);
 
-        CalendarRecycleViewAdapter calendarRecycleViewAdapter = new CalendarRecycleViewAdapter(daysInMonth, this, selectedDate.getMonthValue(), selectedDate.getYear());
+        CalendarRecycleViewAdapterClient calendarRecycleViewAdapterClient = new CalendarRecycleViewAdapterClient(daysInMonth, this, selectedDate.getMonthValue(), selectedDate.getYear());
         rvCalendar.setLayoutManager(new GridLayoutManager(getApplicationContext(), 7));
-        rvCalendar.setAdapter(calendarRecycleViewAdapter);
+        rvCalendar.setAdapter(calendarRecycleViewAdapterClient);
 
     }
 
