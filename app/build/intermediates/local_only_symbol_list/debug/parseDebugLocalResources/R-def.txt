@@ -196,6 +196,7 @@ id lateValue
 id linearLayout
 id listButton
 id listView
+id logoutBtn
 id lvRQ
 id main
 id nonPaidLeaves
@@ -270,7 +271,6 @@ id tvProjectStatus
 id tvTimer
 id tvUserId
 id tvUserName
-id tvWelcome
 id tvWorkTimeEmployee1
 id tvWorkTimeEmployee2
 id tvWorkTimeValueEmployee1

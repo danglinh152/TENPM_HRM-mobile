@@ -3529,6 +3529,7 @@ id listButton
 id listMode
 id listView
 id list_item
+id logoutBtn
 id lvRQ
 id m3_side_sheet
 id main
@@ -3839,7 +3840,6 @@ id tvProjectStatus
 id tvTimer
 id tvUserId
 id tvUserName
-id tvWelcome
 id tvWorkTimeEmployee1
 id tvWorkTimeEmployee2
 id tvWorkTimeValueEmployee1
