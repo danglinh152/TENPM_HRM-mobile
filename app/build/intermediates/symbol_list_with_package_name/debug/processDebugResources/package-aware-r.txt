@@ -3651,6 +3651,7 @@ id position
 id postLayout
 id pressed
 id profile_image
+id progressBar
 id progress_circular
 id progress_horizontal
 id projectContainer
@@ -3682,6 +3683,7 @@ id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
+id scrollView2
 id scrollable
 id searchBtn
 id searchView
@@ -3837,6 +3839,7 @@ id tvProjectStatus
 id tvTimer
 id tvUserId
 id tvUserName
+id tvWelcome
 id tvWorkTimeEmployee1
 id tvWorkTimeEmployee2
 id tvWorkTimeValueEmployee1

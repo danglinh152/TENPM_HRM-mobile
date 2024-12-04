@@ -4,12 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 public class HomepageAdmin extends AppCompatActivity {
+    private TextView tvWelcome;
     private CardView cardEmployee;
     private CardView cardDepartment;
     private CardView cardAttendance;
@@ -17,7 +19,7 @@ public class HomepageAdmin extends AppCompatActivity {
     private CardView cardProject;
     private CardView cardRequest;
     private CardView cardAccount;
-    private ProgressBar progressBar; // Add a ProgressBar for better UX
+    private ProgressBar progressBar; // ProgressBar for better UX
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,9 @@ public class HomepageAdmin extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.homepage_admin);
 
+        tvWelcome = findViewById(R.id.tvWelcome);
+
+        // Khởi tạo các CardView
         cardRequest = findViewById(R.id.cardRequest);
         cardEmployee = findViewById(R.id.cardEmployee);
         cardDepartment = findViewById(R.id.cardDepartment);
@@ -32,111 +37,40 @@ public class HomepageAdmin extends AppCompatActivity {
         cardFacilities = findViewById(R.id.cardFacilities);
         cardProject = findViewById(R.id.cardProject);
         cardAccount = findViewById(R.id.cardAccount);
-//        progressBar = findViewById(R.id.progressBar);
+        progressBar = findViewById(R.id.progressBar); // Khởi tạo ProgressBar
 
-        cardRequest.setOnClickListener(new View.OnClickListener() {
+        // Thiết lập sự kiện click cho các CardView
+        setupCardClickListener(cardRequest, RequestManagementAdmin.class);
+        setupCardClickListener(cardEmployee, EmployeeManagement.class);
+        setupCardClickListener(cardDepartment, DepartmentManagement.class);
+        setupCardClickListener(cardAttendance, AttendanceManagement.class);
+        setupCardClickListener(cardFacilities, CSVCManagement.class);
+        setupCardClickListener(cardProject, ProjectManagement.class);
+        setupCardClickListener(cardAccount, AccountManagement.class);
+
+
+        // Nhận dữ liệu từ Intent
+        Intent intent = getIntent();
+        String username = intent.getStringExtra("USERNAME");
+        String loaiTaiKhoan = intent.getStringExtra("LOAITAIKHOAN");
+
+        // Hiển thị thông tin người dùng
+        tvWelcome.setText("Chào mừng " + username + " (" + loaiTaiKhoan + ")");
+    }
+
+    private void setupCardClickListener(CardView card, Class<?> targetActivity) {
+        card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Show ProgressBar before starting the new activity
-//                progressBar.setVisibility(View.VISIBLE);
+                // Hiện ProgressBar trước khi chuyển đến Activity mới
+                progressBar.setVisibility(View.VISIBLE);
 
-                // Start the new activity
-                Intent newRequestIntent = new Intent(HomepageAdmin.this, RequestManagementAdmin.class);
-                startActivity(newRequestIntent);
+                // Bắt đầu Activity mới
+                Intent newActivityIntent = new Intent(HomepageAdmin.this, targetActivity);
+                startActivity(newActivityIntent);
 
-                // Optionally hide the ProgressBar after a short delay
-                // This is just to simulate loading; adjust as needed
-//                v.postDelayed(() -> progressBar.setVisibility(View.GONE), 300);
-            }
-        });
-        cardEmployee.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Show ProgressBar before starting the new activity
-//                progressBar.setVisibility(View.VISIBLE);
-
-                // Start the new activity
-                Intent newRequestIntent = new Intent(HomepageAdmin.this, EmployeeManagement.class);
-                startActivity(newRequestIntent);
-
-                // Optionally hide the ProgressBar after a short delay
-                // This is just to simulate loading; adjust as needed
-//                v.postDelayed(() -> progressBar.setVisibility(View.GONE), 300);
-            }
-        });
-        cardDepartment.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Show ProgressBar before starting the new activity
-//                progressBar.setVisibility(View.VISIBLE);
-
-                // Start the new activity
-                Intent newRequestIntent = new Intent(HomepageAdmin.this, DepartmentManagement.class);
-                startActivity(newRequestIntent);
-
-                // Optionally hide the ProgressBar after a short delay
-                // This is just to simulate loading; adjust as needed
-//                v.postDelayed(() -> progressBar.setVisibility(View.GONE), 300);
-            }
-        });
-        cardAttendance.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Show ProgressBar before starting the new activity
-//                progressBar.setVisibility(View.VISIBLE);
-
-                // Start the new activity
-                Intent newRequestIntent = new Intent(HomepageAdmin.this, AttendanceManagement.class);
-                startActivity(newRequestIntent);
-
-                // Optionally hide the ProgressBar after a short delay
-                // This is just to simulate loading; adjust as needed
-//                v.postDelayed(() -> progressBar.setVisibility(View.GONE), 300);
-            }
-        });
-        cardFacilities.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Show ProgressBar before starting the new activity
-//                progressBar.setVisibility(View.VISIBLE);
-
-                // Start the new activity
-                Intent newRequestIntent = new Intent(HomepageAdmin.this, CSVCManagement.class);
-                startActivity(newRequestIntent);
-
-                // Optionally hide the ProgressBar after a short delay
-                // This is just to simulate loading; adjust as needed
-//                v.postDelayed(() -> progressBar.setVisibility(View.GONE), 300);
-            }
-        });
-        cardProject.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Show ProgressBar before starting the new activity
-//                progressBar.setVisibility(View.VISIBLE);
-
-                // Start the new activity
-                Intent newRequestIntent = new Intent(HomepageAdmin.this, ProjectManagement.class);
-                startActivity(newRequestIntent);
-
-                // Optionally hide the ProgressBar after a short delay
-                // This is just to simulate loading; adjust as needed
-//                v.postDelayed(() -> progressBar.setVisibility(View.GONE), 300);
-            }
-        });
-        cardAccount.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Show ProgressBar before starting the new activity
-//                progressBar.setVisibility(View.VISIBLE);
-
-                // Start the new activity
-                Intent newRequestIntent = new Intent(HomepageAdmin.this, AccountManagement .class);
-                startActivity(newRequestIntent);
-
-                // Optionally hide the ProgressBar after a short delay
-                // This is just to simulate loading; adjust as needed
-//                v.postDelayed(() -> progressBar.setVisibility(View.GONE), 300);
+                // Ẩn ProgressBar sau một khoảng thời gian ngắn
+                v.postDelayed(() -> progressBar.setVisibility(View.GONE), 300);
             }
         });
     }

@@ -80,6 +80,11 @@ public class Login extends AppCompatActivity {
             } else {
                 intent = new Intent(Login.this, HomePageClient.class);
             }
+
+            // Truyền dữ liệu người dùng qua Intent
+            intent.putExtra("USERNAME", username);
+            intent.putExtra("LOAITAIKHOAN", loaiTaiKhoan);
+
             startActivity(intent);
             finish(); // Kết thúc Activity đăng nhập
         } else {
@@ -88,4 +93,6 @@ public class Login extends AppCompatActivity {
             db.close();
         }
     }
+
+
 }

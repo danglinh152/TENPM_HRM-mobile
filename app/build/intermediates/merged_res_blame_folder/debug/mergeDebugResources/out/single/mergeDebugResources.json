@@ -20,12 +20,16 @@
         "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\drawable\\blue_circle.xml"
     },
     {
+        "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-31:\\drawable_content_bg.xml.flat",
+        "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\drawable\\content_bg.xml"
+    },
+    {
         "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-31:\\drawable_circle_background.xml.flat",
         "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\drawable\\circle_background.xml"
     },
     {
-        "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-31:\\drawable_content_bg.xml.flat",
-        "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\drawable\\content_bg.xml"
+        "merged": "com.example.tenpm_hrm.app-debug-31:/layout_homepage_admin.xml.flat",
+        "source": "com.example.tenpm_hrm.app-main-33:/layout/homepage_admin.xml"
     },
     {
         "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-31:\\drawable_rectangle_item.xml.flat",
@@ -56,16 +60,16 @@
         "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\drawable\\sale.png"
     },
     {
-        "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-31:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-31:\\drawable_baseline_settings_24.xml.flat",
+        "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\drawable\\baseline_settings_24.xml"
     },
     {
         "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-31:\\mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-31:\\drawable_baseline_settings_24.xml.flat",
-        "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\drawable\\baseline_settings_24.xml"
+        "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-31:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-31:\\layout_create_employee.xml.flat",
@@ -80,16 +84,16 @@
         "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\layout\\request_management_admin.xml"
     },
     {
-        "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-31:\\layout_account_item.xml.flat",
-        "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\layout\\account_item.xml"
+        "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-31:\\layout_create_account.xml.flat",
+        "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\layout\\create_account.xml"
     },
     {
         "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-31:\\drawable_depart.png.flat",
         "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\drawable\\depart.png"
     },
     {
-        "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-31:\\layout_create_account.xml.flat",
-        "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\layout\\create_account.xml"
+        "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-31:\\layout_account_item.xml.flat",
+        "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\layout\\account_item.xml"
     },
     {
         "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-31:\\drawable_group_98.png.flat",
@@ -116,10 +120,6 @@
         "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\drawable\\search.png"
     },
     {
-        "merged": "com.example.tenpm_hrm.app-debug-31:/layout_login.xml.flat",
-        "source": "com.example.tenpm_hrm.app-main-33:/layout/login.xml"
-    },
-    {
         "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-31:\\layout_item_calendar.xml.flat",
         "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\layout\\item_calendar.xml"
     },
@@ -140,12 +140,12 @@
         "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\layout\\employee_management.xml"
     },
     {
-        "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-31:\\drawable_marketing.png.flat",
-        "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\drawable\\marketing.png"
-    },
-    {
         "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-31:\\drawable_yellow_circle.xml.flat",
         "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\drawable\\yellow_circle.xml"
+    },
+    {
+        "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-31:\\drawable_marketing.png.flat",
+        "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\drawable\\marketing.png"
     },
     {
         "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-31:\\layout_csvc_management_admin.xml.flat",
@@ -164,16 +164,16 @@
         "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\drawable\\baseline_home_24.xml"
     },
     {
-        "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-31:\\drawable_item_account.xml.flat",
-        "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\drawable\\item_account.xml"
+        "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-31:\\drawable_rb_2148866842.png.flat",
+        "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\drawable\\rb_2148866842.png"
     },
     {
         "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-31:\\drawable_it.png.flat",
         "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\drawable\\it.png"
     },
     {
-        "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-31:\\drawable_rb_2148866842.png.flat",
-        "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\drawable\\rb_2148866842.png"
+        "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-31:\\drawable_item_account.xml.flat",
+        "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-33:\\drawable\\item_account.xml"
     },
     {
         "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-31:\\drawable_arrow.png.flat",

@@ -205,6 +205,7 @@ id overtimeValue
 id paidLeaves
 id paidLeavesValue
 id profile_image
+id progressBar
 id projectContainer
 id projectContainerInformation
 id quantity
@@ -214,6 +215,7 @@ id rlEmployee1Information
 id rlEmployee2Information
 id rlHeaderContainer
 id rvCalendar
+id scrollView2
 id searchBtn
 id searchView
 id services_grid
@@ -268,6 +270,7 @@ id tvProjectStatus
 id tvTimer
 id tvUserId
 id tvUserName
+id tvWelcome
 id tvWorkTimeEmployee1
 id tvWorkTimeEmployee2
 id tvWorkTimeValueEmployee1
