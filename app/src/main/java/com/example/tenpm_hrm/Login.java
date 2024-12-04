@@ -14,6 +14,8 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
+import models.NhanVien;
+
 public class Login extends AppCompatActivity {
 
     private DatabaseHandler dbHandler;
@@ -84,6 +86,9 @@ public class Login extends AppCompatActivity {
             // Truyền dữ liệu người dùng qua Intent
             intent.putExtra("USERNAME", username);
             intent.putExtra("LOAITAIKHOAN", loaiTaiKhoan);
+
+            NhanVien nhanVien = new NhanVien();
+            intent.putExtra("user",  nhanVien);
 
             startActivity(intent);
             finish(); // Kết thúc Activity đăng nhập
