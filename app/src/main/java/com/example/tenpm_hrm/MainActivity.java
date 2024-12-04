@@ -13,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.login);
         dbHandler = new DatabaseHandler(this);
+        dbHandler.deleteDatabase(this); // deletedb
         dbHandler.addDe();
+        dbHandler.addAdminAccount();
     }
 }

@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 
@@ -98,6 +99,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public DatabaseHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
+    public void deleteDatabase(Context context) {
+        context.deleteDatabase(DATABASE_NAME);
+    }
+
 
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -134,7 +139,40 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put("MATRUONGPHONG", 1);
         values.put("NGAYNHANCHUC", "2024-12-04");
         long rowId = db.insert("PHONGBAN", null, values);
-
-
     }
+    public void addAdminAccount() {
+        db = this.getWritableDatabase();
+
+        // Thêm thông tin nhân viên
+        ContentValues values = new ContentValues();
+        values.put("HOTEN", "Mùa Đông Không Lạnh");
+        values.put("GIOITINH", "Nam");
+        values.put("NGSINH", "2004-02-15");
+        values.put("SDT", "123123123");
+        values.put("EMAIL", "lanhmdk@gmail.com");
+        values.put("DIACHI", "Long Thành, Đồng Nai");
+        values.put("CCCD", "001004075822");
+        values.put("CAPBAC", "MANAGER");
+        values.put("MAPB", 1); // Đảm bảo MAPB đã tồn tại trong bảng PHONGBAN
+
+        long rowId = db.insert("NHANVIEN", null, values);
+        if (rowId == -1) {
+            Log.e("DatabaseHandler", "Error inserting employee data");
+        } else {
+            // Thêm tài khoản
+            ContentValues accountValues = new ContentValues();
+            accountValues.put("MANV", rowId); // Sử dụng MANV vừa tạo
+            accountValues.put("TENTK", "admin");
+            accountValues.put("MATKHAU", "admin");
+            accountValues.put("LOAITAIKHOAN", "quản lý");
+
+            long accountRowId = db.insert("TAIKHOAN", null, accountValues);
+            if (accountRowId == -1) {
+                Log.e("DatabaseHandler", "Error inserting account data");
+            }
+        }
+    }
+
+
+
 }
