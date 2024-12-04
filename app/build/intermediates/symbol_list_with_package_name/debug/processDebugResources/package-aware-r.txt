@@ -1423,6 +1423,7 @@ color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
 color gray
+color green
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color m3_appbar_overlay_color
@@ -2997,6 +2998,7 @@ drawable baseline_notifications_24
 drawable baseline_settings_24
 drawable bell
 drawable bg
+drawable blue_circle
 drawable blue_rectangle
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -3024,6 +3026,7 @@ drawable ellipse_4
 drawable ellipse_5
 drawable employee
 drawable employee_type_shape
+drawable gray_circle
 drawable green_circle
 drawable group_98
 drawable half_circle_blue
@@ -3055,6 +3058,7 @@ drawable it
 drawable item_account
 drawable left_arrow
 drawable list
+drawable logo
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
 drawable m3_bottom_sheet_drag_handle
@@ -3133,6 +3137,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable project
 drawable rb_18771
 drawable rb_2148823073
 drawable rb_2148866842
@@ -3144,6 +3149,7 @@ drawable rb_7019
 drawable rb_739
 drawable rectangle
 drawable rectangle_item
+drawable red_circle
 drawable request_img
 drawable rounded_corner_background
 drawable sale
@@ -3155,6 +3161,7 @@ drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable x_img
+drawable yellow_circle
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -3445,6 +3452,7 @@ id imageView12
 id imageView13
 id imageView14
 id imageView15
+id imageView16
 id imageView2
 id imageView3
 id imageView4
@@ -3454,7 +3462,6 @@ id imageView7
 id imageView8
 id imageView9
 id imgSetting
-id img_arrow
 id img_searchbox
 id immediateStop
 id included
@@ -3647,6 +3654,7 @@ id profile_image
 id progress_circular
 id progress_horizontal
 id projectContainer
+id projectContainerInformation
 id quantity
 id quantity2
 id quantity3

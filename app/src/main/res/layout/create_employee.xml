@@ -281,7 +281,7 @@
             android:scaleType="centerCrop"
             android:layout_marginStart="150dp"
             android:background="?android:attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/x_img"
+            android:src="@drawable/img_upload"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </com.google.android.material.textfield.TextInputLayout>

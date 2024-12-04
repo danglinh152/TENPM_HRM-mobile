@@ -2,6 +2,7 @@ R_DEF: Internal format may change without notice
 local
 color black
 color gray
+color green
 color primary_color
 color white
 drawable account_detail
@@ -12,6 +13,7 @@ drawable baseline_notifications_24
 drawable baseline_settings_24
 drawable bell
 drawable bg
+drawable blue_circle
 drawable blue_rectangle
 drawable btn_login
 drawable check
@@ -26,6 +28,7 @@ drawable ellipse_4
 drawable ellipse_5
 drawable employee
 drawable employee_type_shape
+drawable gray_circle
 drawable green_circle
 drawable group_98
 drawable half_circle_blue
@@ -38,12 +41,14 @@ drawable it
 drawable item_account
 drawable left_arrow
 drawable list
+drawable logo
 drawable mail_img
 drawable management_img
 drawable manager_type_shape
 drawable marketing
 drawable menu
 drawable nav
+drawable project
 drawable rb_18771
 drawable rb_2148823073
 drawable rb_2148866842
@@ -55,6 +60,7 @@ drawable rb_7019
 drawable rb_739
 drawable rectangle
 drawable rectangle_item
+drawable red_circle
 drawable request_img
 drawable rounded_corner_background
 drawable sale
@@ -63,6 +69,7 @@ drawable search
 drawable search_background
 drawable teamwork_1256650
 drawable x_img
+drawable yellow_circle
 id CSVCname
 id CSVCname2
 id CSVCname3
@@ -132,6 +139,7 @@ id imageView12
 id imageView13
 id imageView14
 id imageView15
+id imageView16
 id imageView2
 id imageView3
 id imageView4
@@ -141,7 +149,6 @@ id imageView7
 id imageView8
 id imageView9
 id imgSetting
-id img_arrow
 id img_searchbox
 id inputAccType
 id inputAddProjectDesc
@@ -199,6 +206,7 @@ id paidLeaves
 id paidLeavesValue
 id profile_image
 id projectContainer
+id projectContainerInformation
 id quantity
 id quantity2
 id quantity3

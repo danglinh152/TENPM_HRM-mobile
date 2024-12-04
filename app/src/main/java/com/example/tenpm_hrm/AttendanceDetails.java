@@ -1,6 +1,9 @@
 package com.example.tenpm_hrm;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -14,13 +17,15 @@ import java.time.YearMonth;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
-import customlistview.CalendarRecycleViewAdapter;
+import customlistview.CalendarRecycleViewAdapterClient;
 
-public class AttendanceDetails extends AppCompatActivity implements CalendarRecycleViewAdapter.OnItemListener {
+public class AttendanceDetails extends AppCompatActivity implements CalendarRecycleViewAdapterClient.OnItemListener {
 
     private TextView tvMonthYear;
     private RecyclerView rvCalendar;
     private LocalDate selectedDate;
+
+    private Button buttonAttendanceCheckInOut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +35,15 @@ public class AttendanceDetails extends AppCompatActivity implements CalendarRecy
 
         rvCalendar = findViewById(R.id.rvCalendar);
         tvMonthYear = findViewById(R.id.tvMonthYear);
+        buttonAttendanceCheckInOut = findViewById(R.id.buttonAttendanceCheckInOut);
+
+        buttonAttendanceCheckInOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AttendanceDetails.this, Checkinout.class);
+                startActivity(intent);
+            }
+        });
 
         selectedDate = LocalDate.now();
         setTvMonthYear();
@@ -63,9 +77,9 @@ public class AttendanceDetails extends AppCompatActivity implements CalendarRecy
         tvMonthYear.setText(monthYearFromDate(selectedDate));
         ArrayList<String> daysInMonth = daysInMonthArray(selectedDate);
 
-        CalendarRecycleViewAdapter calendarRecycleViewAdapter = new CalendarRecycleViewAdapter(daysInMonth, this);
+        CalendarRecycleViewAdapterClient calendarRecycleViewAdapterClient = new CalendarRecycleViewAdapterClient(daysInMonth, this, selectedDate.getMonthValue(), selectedDate.getYear());
         rvCalendar.setLayoutManager(new GridLayoutManager(getApplicationContext(), 7));
-        rvCalendar.setAdapter(calendarRecycleViewAdapter);
+        rvCalendar.setAdapter(calendarRecycleViewAdapterClient);
 
     }
 
