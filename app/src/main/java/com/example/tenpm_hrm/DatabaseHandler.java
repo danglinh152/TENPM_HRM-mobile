@@ -163,6 +163,39 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return false;
     }
 
+    public ArrayList<Request> getRequestsByNVId(int NVid) {
+        ArrayList<Request> requestList = new ArrayList<>();
+        db = this.getReadableDatabase();
+
+        // Define the selection criteria
+        String selection = "MANV = ?";
+        String[] selectionArgs = { String.valueOf(NVid) };
+
+        // Query the YEUCAU table for requests by MANV
+        Cursor cursor = db.query("YEUCAU", null, selection, selectionArgs, null, null, null);
+
+        if (cursor != null) {
+            try {
+                // Loop through all records in the cursor
+                while (cursor.moveToNext()) {
+                    // Retrieve data from cursor
+                    int mayc = cursor.getInt(cursor.getColumnIndex("MAYC")); // Use exact column name
+                    String noidung = cursor.getString(cursor.getColumnIndex("NOIDUNG"));
+                    String chude = cursor.getString(cursor.getColumnIndex("CHUDE"));
+                    int trangthai = cursor.getInt(cursor.getColumnIndex("TRANGTHAI"));
+
+                    // Create Request object and add to the list
+                    Request request = new Request(mayc, NVid, chude, noidung, trangthai);
+                    requestList.add(request);
+                }
+            } finally {
+                cursor.close(); // Ensure cursor is closed in the finally block
+            }
+        }
+
+        return requestList;
+    }
+
     public ArrayList<Request> getAllRequests() {
         ArrayList<Request> requestList = new ArrayList<>();
         db = this.getReadableDatabase();
@@ -284,6 +317,18 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
 
+    public boolean deleteRequest(int maYC) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        // Define the where clause for the deletion
+        String whereClause = "MAYC = ?";
+        String[] whereArgs = { String.valueOf(maYC) };
 
+        // Execute the delete operation
+        int rowsAffected = db.delete("YEUCAU", whereClause, whereArgs);
+        db.close();
+
+        // Return true if at least one row was deleted
+        return rowsAffected > 0;
+    }
 
 }

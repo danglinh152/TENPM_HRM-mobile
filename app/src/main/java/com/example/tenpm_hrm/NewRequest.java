@@ -22,7 +22,6 @@ public class NewRequest extends AppCompatActivity {
     private EditText edtNoiDung;
     private Button submitBtn;
     private DatabaseHandler dbHandler;
-    private int manv; // Thêm biến để lưu manv
 
     private NhanVien nhanVien;
 
@@ -54,7 +53,7 @@ public class NewRequest extends AppCompatActivity {
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (dbHandler.addRequest(manv, edtChuDe.getText().toString(), edtNoiDung.getText().toString())) {
+                if (dbHandler.addRequest(nhanVien.getMaNV(), edtChuDe.getText().toString(), edtNoiDung.getText().toString())) {
                     Intent newRequestIntent = new Intent(NewRequest.this, RequestManagementClient.class);
                     newRequestIntent.putExtra("nhanVien", nhanVien); // Gửi đối tượng NhanVien qua Intent
                     startActivity(newRequestIntent);
