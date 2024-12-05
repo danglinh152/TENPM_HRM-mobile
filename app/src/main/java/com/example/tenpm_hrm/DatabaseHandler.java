@@ -149,6 +149,76 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         long rowId = db.insert("PHONGBAN", null, values);
     }
 
+
+
+
+
+
+
+    public void addAdminAccount() {
+        db = this.getWritableDatabase();
+
+        // Thêm thông tin nhân viên đầu tiên
+        ContentValues values1 = new ContentValues();
+        values1.put("HOTEN", "Mùa Đông Không Lạnh");
+        values1.put("GIOITINH", "Nam");
+        values1.put("NGSINH", "2004-02-15");
+        values1.put("SDT", "123123123");
+        values1.put("EMAIL", "lanhmdk@gmail.com");
+        values1.put("DIACHI", "Long Thành, Đồng Nai");
+        values1.put("CCCD", "001004075822");
+        values1.put("CAPBAC", "MANAGER");
+        values1.put("MAPB", 1); // Đảm bảo MAPB đã tồn tại trong bảng PHONGBAN
+
+        long rowId1 = db.insert("NHANVIEN", null, values1);
+        if (rowId1 == -1) {
+            Log.e("DatabaseHandler", "Error inserting first employee data");
+        } else {
+            // Thêm tài khoản cho nhân viên đầu tiên
+            ContentValues accountValues1 = new ContentValues();
+            accountValues1.put("MANV", rowId1); // Sử dụng MANV vừa tạo
+            accountValues1.put("TENTK", "admin");
+            accountValues1.put("MATKHAU", "admin");
+            accountValues1.put("LOAITAIKHOAN", "quản lý");
+
+            long accountRowId1 = db.insert("TAIKHOAN", null, accountValues1);
+            if (accountRowId1 == -1) {
+                Log.e("DatabaseHandler", "Error inserting first admin account data");
+            }
+        }
+
+        // Thêm thông tin nhân viên thứ hai
+        ContentValues values2 = new ContentValues();
+        values2.put("HOTEN", "Mùa Hè Nóng Bỏng");
+        values2.put("GIOITINH", "Nu");
+        values2.put("NGSINH", "2000-05-20");
+        values2.put("SDT", "321321321");
+        values2.put("EMAIL", "nuhoang@gmail.com");
+        values2.put("DIACHI", "Hồ Chí Minh");
+        values2.put("CCCD", "001004075823");
+        values2.put("CAPBAC", "MANAGER");
+        values2.put("MAPB", 1); // Đảm bảo MAPB đã tồn tại trong bảng PHONGBAN
+
+        long rowId2 = db.insert("NHANVIEN", null, values2);
+        if (rowId2 == -1) {
+            Log.e("DatabaseHandler", "Error inserting second employee data");
+        } else {
+            // Thêm tài khoản cho nhân viên thứ hai
+            ContentValues accountValues2 = new ContentValues();
+            accountValues2.put("MANV", rowId2); // Sử dụng MANV vừa tạo
+            accountValues2.put("TENTK", "client");
+            accountValues2.put("MATKHAU", "client");
+            accountValues2.put("LOAITAIKHOAN", "nhân viên");
+
+            long accountRowId2 = db.insert("TAIKHOAN", null, accountValues2);
+            if (accountRowId2 == -1) {
+                Log.e("DatabaseHandler", "Error inserting second admin account data");
+            }
+        }
+    }
+
+
+//    ============================= Request
     public boolean addRequest(int manv, String chude, String noidung) {
         db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -294,74 +364,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         return rowsAffected > 0; // Return true if at least one row was updated
     }
-
-
-
-
-
-    public void addAdminAccount() {
-        db = this.getWritableDatabase();
-
-        // Thêm thông tin nhân viên đầu tiên
-        ContentValues values1 = new ContentValues();
-        values1.put("HOTEN", "Mùa Đông Không Lạnh");
-        values1.put("GIOITINH", "Nam");
-        values1.put("NGSINH", "2004-02-15");
-        values1.put("SDT", "123123123");
-        values1.put("EMAIL", "lanhmdk@gmail.com");
-        values1.put("DIACHI", "Long Thành, Đồng Nai");
-        values1.put("CCCD", "001004075822");
-        values1.put("CAPBAC", "MANAGER");
-        values1.put("MAPB", 1); // Đảm bảo MAPB đã tồn tại trong bảng PHONGBAN
-
-        long rowId1 = db.insert("NHANVIEN", null, values1);
-        if (rowId1 == -1) {
-            Log.e("DatabaseHandler", "Error inserting first employee data");
-        } else {
-            // Thêm tài khoản cho nhân viên đầu tiên
-            ContentValues accountValues1 = new ContentValues();
-            accountValues1.put("MANV", rowId1); // Sử dụng MANV vừa tạo
-            accountValues1.put("TENTK", "admin");
-            accountValues1.put("MATKHAU", "admin");
-            accountValues1.put("LOAITAIKHOAN", "quản lý");
-
-            long accountRowId1 = db.insert("TAIKHOAN", null, accountValues1);
-            if (accountRowId1 == -1) {
-                Log.e("DatabaseHandler", "Error inserting first admin account data");
-            }
-        }
-
-        // Thêm thông tin nhân viên thứ hai
-        ContentValues values2 = new ContentValues();
-        values2.put("HOTEN", "Mùa Hè Nóng Bỏng");
-        values2.put("GIOITINH", "Nu");
-        values2.put("NGSINH", "2000-05-20");
-        values2.put("SDT", "321321321");
-        values2.put("EMAIL", "nuhoang@gmail.com");
-        values2.put("DIACHI", "Hồ Chí Minh");
-        values2.put("CCCD", "001004075823");
-        values2.put("CAPBAC", "MANAGER");
-        values2.put("MAPB", 1); // Đảm bảo MAPB đã tồn tại trong bảng PHONGBAN
-
-        long rowId2 = db.insert("NHANVIEN", null, values2);
-        if (rowId2 == -1) {
-            Log.e("DatabaseHandler", "Error inserting second employee data");
-        } else {
-            // Thêm tài khoản cho nhân viên thứ hai
-            ContentValues accountValues2 = new ContentValues();
-            accountValues2.put("MANV", rowId2); // Sử dụng MANV vừa tạo
-            accountValues2.put("TENTK", "client");
-            accountValues2.put("MATKHAU", "client");
-            accountValues2.put("LOAITAIKHOAN", "nhân viên");
-
-            long accountRowId2 = db.insert("TAIKHOAN", null, accountValues2);
-            if (accountRowId2 == -1) {
-                Log.e("DatabaseHandler", "Error inserting second admin account data");
-            }
-        }
-    }
-
-
     public boolean deleteRequest(int maYC) {
         SQLiteDatabase db = this.getWritableDatabase();
         // Define the where clause for the deletion
@@ -375,5 +377,21 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         // Return true if at least one row was deleted
         return rowsAffected > 0;
     }
+
+    public boolean editRequest(int maYC, String newChuDe, String newNoiDung) {
+        SQLiteDatabase db = this.getWritableDatabase(); // Open the database for writing
+
+        ContentValues values = new ContentValues();
+        values.put("CHUDE", newChuDe); // Set the new topic
+        values.put("NOIDUNG", newNoiDung); // Set the new information
+
+        // Update the request in the database where the id matches maYC
+        int rowsAffected = db.update("YEUCAU", values, "MAYC = ?", new String[]{String.valueOf(maYC)});
+
+        db.close(); // Close the database after operation
+
+        return rowsAffected > 0; // Return true if the update was successful, false otherwise
+    }
+
 
 }
