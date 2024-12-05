@@ -44,7 +44,12 @@ public class RequestManagementAdmin extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Request selectedRequest = requests.get(position);
                 int maYC = selectedRequest.getId();
-                showConfirmationDialog(position, maYC);
+                if(dbHandler.getRequestsByRqId(maYC).isApproved() == 0) {
+                    showConfirmationDialog(position, maYC);
+                }
+                else{
+                    Toast.makeText(RequestManagementAdmin.this, "Request handled.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -81,20 +86,26 @@ public class RequestManagementAdmin extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Xác nhận hành động")
                 .setMessage("Bạn có muốn xử lý yêu cầu: " + requests.get(position).getInformation() + "?")
-                .setPositiveButton("Xác nhận", new DialogInterface.OnClickListener() {
+                .setPositiveButton("Xét duyệt", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         boolean isApproved = dbHandler.approveRequest(maYC);
                         if (isApproved) {
                             Toast.makeText(RequestManagementAdmin.this, "Request approved successfully.", Toast.LENGTH_SHORT).show();
-                            loadRequests(); // Refresh the list of requests
+                            loadRequests();
                         } else {
                             Toast.makeText(RequestManagementAdmin.this, "Failed to approve request.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 })
-                .setNegativeButton("Hủy", new DialogInterface.OnClickListener() {
+                .setNegativeButton("Từ chối", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        dialog.dismiss(); // Close the dialog
+                        boolean isRejected = dbHandler.rejectRequest(maYC);
+                        if (isRejected) {
+                            Toast.makeText(RequestManagementAdmin.this, "Request rejected successfully.", Toast.LENGTH_SHORT).show();
+                            loadRequests();
+                        } else {
+                            Toast.makeText(RequestManagementAdmin.this, "Failed to reject request.", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 });
         AlertDialog dialog = builder.create();

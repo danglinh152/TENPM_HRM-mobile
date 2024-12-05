@@ -71,7 +71,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                     "MANV INTEGER, " +
                     "NOIDUNG TEXT, " +
                     "CHUDE TEXT, " +
-                    "TRANGTHAI INTEGER CHECK (TRANGTHAI IN (0, 1)), " +
+                    "TRANGTHAI INTEGER CHECK (TRANGTHAI IN (-1, 0, 1)), " +
                     "FOREIGN KEY (MANV) REFERENCES NHANVIEN(MANV)" +
                     ");";
     private static final String CREATE_TABLE_COSOVATCHAT =
@@ -196,6 +196,39 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return requestList;
     }
 
+    public Request getRequestsByRqId(int RqId) {
+        Request request = new Request();
+        db = this.getReadableDatabase();
+
+        // Define the selection criteria
+        String selection = "MAYC = ?";
+        String[] selectionArgs = { String.valueOf(RqId) };
+
+        // Query the YEUCAU table for requests by MANV
+        Cursor cursor = db.query("YEUCAU", null, selection, selectionArgs, null, null, null);
+
+        if (cursor != null) {
+            try {
+                // Loop through all records in the cursor
+                while (cursor.moveToNext()) {
+                    // Retrieve data from cursor
+                    int mayc = cursor.getInt(cursor.getColumnIndex("MAYC")); // Use exact column name
+                    int NVid = cursor.getInt(cursor.getColumnIndex("MANV")); // Use exact column name
+                    String noidung = cursor.getString(cursor.getColumnIndex("NOIDUNG"));
+                    String chude = cursor.getString(cursor.getColumnIndex("CHUDE"));
+                    int trangthai = cursor.getInt(cursor.getColumnIndex("TRANGTHAI"));
+
+                    // Create Request object and add to the list
+                    request = new Request(mayc, NVid, chude, noidung, trangthai);
+                }
+            } finally {
+                cursor.close(); // Ensure cursor is closed in the finally block
+            }
+        }
+
+        return request;
+    }
+
     public ArrayList<Request> getAllRequests() {
         ArrayList<Request> requestList = new ArrayList<>();
         db = this.getReadableDatabase();
@@ -230,6 +263,18 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("TRANGTHAI", 1); // Assuming 1 indicates approved
+
+        // Update the request in the database
+        int rowsAffected = db.update("YEUCAU", values, "MAYC = ?", new String[]{String.valueOf(mayc)});
+        db.close();
+
+        return rowsAffected > 0; // Return true if at least one row was updated
+    }
+
+    public boolean rejectRequest(int mayc) {
+        db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("TRANGTHAI", -1); // Assuming 1 indicates approved
 
         // Update the request in the database
         int rowsAffected = db.update("YEUCAU", values, "MAYC = ?", new String[]{String.valueOf(mayc)});

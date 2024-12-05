@@ -8,11 +8,11 @@ import androidx.annotation.NonNull;
 import java.util.Objects;
 
 public class Request implements Parcelable {
-    private final int id; // ID của yêu cầu
-    private final int nvId; // ID nhân viên
-    private final String topic; // Chủ đề
-    private final String information; // Thông tin chi tiết
-    private final int isApproved; // Trạng thái phê duyệt
+    private  int id; // ID của yêu cầu
+    private  int nvId; // ID nhân viên
+    private  String topic; // Chủ đề
+    private  String information; // Thông tin chi tiết
+    private  int isApproved; // Trạng thái phê duyệt
 
     public Request(int id, int nvId, String topic, String information, int isApproved) {
         this.id = id;
@@ -102,5 +102,8 @@ public class Request implements Parcelable {
     @Override
     public int hashCode() {
         return Objects.hash(id, nvId, topic, information, isApproved); // Thêm nvId vào hashCode
+    }
+
+    public Request() {
     }
 }

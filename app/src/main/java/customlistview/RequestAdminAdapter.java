@@ -52,13 +52,17 @@ public class RequestAdminAdapter extends ArrayAdapter<Request> {
         if (request.isApproved() == 1)
         {
             ivManager_approved.setVisibility(View.VISIBLE);
+            convertView.setAlpha(0.5f);
+            convertView.setEnabled(false);
         }
         else if(request.isApproved() == 0)
         {
             ivManager_pending.setVisibility(View.VISIBLE);
         }
-        else{
+        else if(request.isApproved() == -1){
             ivManager_reject.setVisibility(View.VISIBLE);
+            convertView.setAlpha(0.5f);
+            convertView.setEnabled(false);
         }
 
 
