@@ -63,6 +63,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                     "MAYC INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     "MANV INTEGER, " +
                     "NOIDUNG TEXT, " +
+                    "CHUDE TEXT, " +
                     "TRANGTHAI INTEGER CHECK (TRANGTHAI IN (0, 1)), " +
                     "FOREIGN KEY (MANV) REFERENCES NHANVIEN(MANV)" +
                     ");";
@@ -140,38 +141,82 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put("NGAYNHANCHUC", "2024-12-04");
         long rowId = db.insert("PHONGBAN", null, values);
     }
+
+    public boolean addRequest(int manv, String chude, String noidung) {
+        db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("MANV", manv);
+        values.put("CHUDE", chude);
+        values.put("NOIDUNG", noidung);
+        values.put("TRANGTHAI", 0);
+        long rowId = db.insert("YEUCAU", null, values);
+        if(rowId != 0){
+            return true;
+        }
+        return false;
+    }
     public void addAdminAccount() {
         db = this.getWritableDatabase();
 
-        // Thêm thông tin nhân viên
-        ContentValues values = new ContentValues();
-        values.put("HOTEN", "Mùa Đông Không Lạnh");
-        values.put("GIOITINH", "Nam");
-        values.put("NGSINH", "2004-02-15");
-        values.put("SDT", "123123123");
-        values.put("EMAIL", "lanhmdk@gmail.com");
-        values.put("DIACHI", "Long Thành, Đồng Nai");
-        values.put("CCCD", "001004075822");
-        values.put("CAPBAC", "MANAGER");
-        values.put("MAPB", 1); // Đảm bảo MAPB đã tồn tại trong bảng PHONGBAN
+        // Thêm thông tin nhân viên đầu tiên
+        ContentValues values1 = new ContentValues();
+        values1.put("HOTEN", "Mùa Đông Không Lạnh");
+        values1.put("GIOITINH", "Nam");
+        values1.put("NGSINH", "2004-02-15");
+        values1.put("SDT", "123123123");
+        values1.put("EMAIL", "lanhmdk@gmail.com");
+        values1.put("DIACHI", "Long Thành, Đồng Nai");
+        values1.put("CCCD", "001004075822");
+        values1.put("CAPBAC", "MANAGER");
+        values1.put("MAPB", 1); // Đảm bảo MAPB đã tồn tại trong bảng PHONGBAN
 
-        long rowId = db.insert("NHANVIEN", null, values);
-        if (rowId == -1) {
-            Log.e("DatabaseHandler", "Error inserting employee data");
+        long rowId1 = db.insert("NHANVIEN", null, values1);
+        if (rowId1 == -1) {
+            Log.e("DatabaseHandler", "Error inserting first employee data");
         } else {
-            // Thêm tài khoản
-            ContentValues accountValues = new ContentValues();
-            accountValues.put("MANV", rowId); // Sử dụng MANV vừa tạo
-            accountValues.put("TENTK", "admin");
-            accountValues.put("MATKHAU", "admin");
-            accountValues.put("LOAITAIKHOAN", "quản lý");
+            // Thêm tài khoản cho nhân viên đầu tiên
+            ContentValues accountValues1 = new ContentValues();
+            accountValues1.put("MANV", rowId1); // Sử dụng MANV vừa tạo
+            accountValues1.put("TENTK", "admin");
+            accountValues1.put("MATKHAU", "admin");
+            accountValues1.put("LOAITAIKHOAN", "quản lý");
 
-            long accountRowId = db.insert("TAIKHOAN", null, accountValues);
-            if (accountRowId == -1) {
-                Log.e("DatabaseHandler", "Error inserting account data");
+            long accountRowId1 = db.insert("TAIKHOAN", null, accountValues1);
+            if (accountRowId1 == -1) {
+                Log.e("DatabaseHandler", "Error inserting first admin account data");
+            }
+        }
+
+        // Thêm thông tin nhân viên thứ hai
+        ContentValues values2 = new ContentValues();
+        values2.put("HOTEN", "Mùa Hè Nóng Bỏng");
+        values2.put("GIOITINH", "Nu");
+        values2.put("NGSINH", "2000-05-20");
+        values2.put("SDT", "321321321");
+        values2.put("EMAIL", "nuhoang@gmail.com");
+        values2.put("DIACHI", "Hồ Chí Minh");
+        values2.put("CCCD", "001004075823");
+        values2.put("CAPBAC", "MANAGER");
+        values2.put("MAPB", 1); // Đảm bảo MAPB đã tồn tại trong bảng PHONGBAN
+
+        long rowId2 = db.insert("NHANVIEN", null, values2);
+        if (rowId2 == -1) {
+            Log.e("DatabaseHandler", "Error inserting second employee data");
+        } else {
+            // Thêm tài khoản cho nhân viên thứ hai
+            ContentValues accountValues2 = new ContentValues();
+            accountValues2.put("MANV", rowId2); // Sử dụng MANV vừa tạo
+            accountValues2.put("TENTK", "client");
+            accountValues2.put("MATKHAU", "client");
+            accountValues2.put("LOAITAIKHOAN", "nhân viên");
+
+            long accountRowId2 = db.insert("TAIKHOAN", null, accountValues2);
+            if (accountRowId2 == -1) {
+                Log.e("DatabaseHandler", "Error inserting second admin account data");
             }
         }
     }
+
 
 
 

@@ -3386,6 +3386,8 @@ id east
 id edge
 id edit_query
 id edit_text_id
+id edtChuDe
+id edtNoiDung
 id elastic
 id embed
 id employeeManagementLayout

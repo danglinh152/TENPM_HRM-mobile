@@ -1,8 +1,11 @@
 package com.example.tenpm_hrm;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,9 +13,15 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class NewRequest extends AppCompatActivity {
-    private ImageView img_arrow;
+import models.NhanVien;
 
+public class NewRequest extends AppCompatActivity {
+
+    private EditText edtChuDe;
+    private EditText edtNoiDung;
+    private Button submitBtn;
+    private DatabaseHandler dbHandler;
+    private int manv; // Thêm biến để lưu manv
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,15 +29,35 @@ public class NewRequest extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.create_request_client);
 
-//        img_arrow = findViewById(R.id.img_arrow);
-//
-//        img_arrow.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                finish();
-//            }
-//        });
+        dbHandler = new DatabaseHandler(this);
+        edtChuDe = findViewById(R.id.edtChuDe);
+        edtNoiDung = findViewById(R.id.edtNoiDung);
+        submitBtn = findViewById(R.id.button);
 
+        // Lấy Intent và extra
+        Intent intent = getIntent();
+        if (intent != null && intent.hasExtra("nhanVien")) {
+            NhanVien nhanVien = (NhanVien) intent.getSerializableExtra("nhanVien");
+            if (nhanVien != null) {
+                manv = nhanVien.getMaNV(); // Lấy manv từ nhanVien
+            }
+        }
+
+        submitBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(dbHandler.addRequest(manv, edtChuDe.getText().toString(), edtNoiDung.getText().toString())) {
+                    Toast.makeText(NewRequest.this, "Gửi yêu cầu mới thành công!", Toast.LENGTH_SHORT).show();
+
+                    // Reset các trường nhập liệu
+                    edtChuDe.setText("");
+                    edtNoiDung.setText("");
+                }
+                else {
+                    Toast.makeText(NewRequest.this, "Gửi yêu cầu mới thất bại :(", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

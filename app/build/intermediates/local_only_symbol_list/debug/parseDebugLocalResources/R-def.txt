@@ -121,6 +121,8 @@ id description
 id detailsBtn
 id detailsBtn2
 id detailsBtn3
+id edtChuDe
+id edtNoiDung
 id employeeManagementLayout
 id etEmail
 id etPassword

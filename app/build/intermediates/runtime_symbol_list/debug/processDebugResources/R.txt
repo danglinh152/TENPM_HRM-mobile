@@ -3385,6 +3385,8 @@ int id east 0x7f0800dc
 int id edge 0x7f0800dd
 int id edit_query 0x7f0800de
 int id edit_text_id 0x7f0800df
+int id edtChuDe 0x7f0802cc
+int id edtNoiDung 0x7f0802cd
 int id elastic 0x7f0800e0
 int id embed 0x7f0800e1
 int id employeeManagementLayout 0x7f0800e2

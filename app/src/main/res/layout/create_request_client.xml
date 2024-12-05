@@ -14,7 +14,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/header_requests"
         android:layout_marginTop="0dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
@@ -86,7 +85,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
+                android:id="@+id/edtChuDe"
                 android:textColor="@color/black"
                 android:textColorHint="#020202"
                 android:textColorLink="#070707"
@@ -119,6 +118,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="181dp"
+                android:id="@+id/edtNoiDung"
                 android:gravity="top|start"
                 android:textColor="@color/black"
                 android:textColorHint="#020202"
