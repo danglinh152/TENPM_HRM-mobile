@@ -1,5 +1,6 @@
 package com.example.tenpm_hrm;
 
+import android.accounts.Account;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -15,6 +16,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 import models.NhanVien;
+import models.TaiKhoan;
 
 public class Login extends AppCompatActivity {
 
@@ -67,14 +69,39 @@ public class Login extends AppCompatActivity {
 
         // Truy vấn cơ sở dữ liệu
         SQLiteDatabase db = dbHandler.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT LOAITAIKHOAN FROM TAIKHOAN WHERE TENTK = ? AND MATKHAU = ?", new String[]{username, password});
+        Cursor cursor = db.rawQuery("SELECT * FROM TAIKHOAN  INNER JOIN NHANVIEN " +
+                "ON NHANVIEN.MANV = TAIKHOAN. MANV WHERE TENTK = ? AND MATKHAU = ?", new String[]{username, password});
 
         // Kiểm tra kết quả truy vấn
         if (cursor.moveToFirst()) {
-            String loaiTaiKhoan = cursor.getString(0);
+            String loaiTaiKhoan = cursor.getString(4);
+
+
+
+
+            // Truyền dữ liệu người dùng qua Intent
+            int maNV = cursor.getInt(1);
+            String hoTen = cursor.getString(6);
+            String gioiTinh = cursor.getString(7);
+            String ngSinh = cursor.getString(8);
+            String sdt = cursor.getString(9);
+            String email = cursor.getString(10);
+            String diaChi = cursor.getString(11);
+            String cccd= cursor.getString(12);
+            String capBac = cursor.getString(13);
+            int maPB = cursor.getInt(14);
+            //Account
+            int maTK = cursor.getInt(0);
+            String tenTK = cursor.getString(2);
+            String matKhau = cursor.getString(3);
+            String loaiTK = cursor.getString(4);
+            int maNVTK = cursor.getInt(5);
+            NhanVien nhanVien = new NhanVien(maNV, hoTen, gioiTinh, ngSinh, sdt,email, diaChi, cccd, capBac, maPB);
+
+            //them account
+            TaiKhoan taiKhoan= new TaiKhoan(maTK, maNVTK, tenTK, matKhau, loaiTK);
             cursor.close();
             db.close();
-
             // Chuyển đến Activity tương ứng dựa trên loại tài khoản
             Intent intent;
             if ("quản lý".equals(loaiTaiKhoan)) {
@@ -82,14 +109,9 @@ public class Login extends AppCompatActivity {
             } else {
                 intent = new Intent(Login.this, HomePageClient.class);
             }
-
-            // Truyền dữ liệu người dùng qua Intent
-            intent.putExtra("USERNAME", username);
-            intent.putExtra("LOAITAIKHOAN", loaiTaiKhoan);
-
-            NhanVien nhanVien = new NhanVien();
-            intent.putExtra("user",  nhanVien);
-
+            intent.putExtra("nhanVien",  nhanVien);
+            intent.putExtra("taiKhoan", taiKhoan);
+            System.out.println(nhanVien.toString());
             startActivity(intent);
             finish(); // Kết thúc Activity đăng nhập
         } else {
@@ -98,6 +120,4 @@ public class Login extends AppCompatActivity {
             db.close();
         }
     }
-
-
 }

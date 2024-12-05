@@ -82,7 +82,6 @@ public class HomepageAdmin extends AppCompatActivity {
                 // Bắt đầu Activity mới
                 Intent newActivityIntent = new Intent(HomepageAdmin.this, targetActivity);
                 startActivity(newActivityIntent);
-
                 // Ẩn ProgressBar sau một khoảng thời gian ngắn
                 v.postDelayed(() -> progressBar.setVisibility(View.GONE), 300);
             }
