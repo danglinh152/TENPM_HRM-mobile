@@ -21,7 +21,24 @@ public class TaiKhoan implements Parcelable {
     }
 
     protected TaiKhoan(Parcel in) {
+        maNV = in.readInt();
+        maTK = in.readInt();
+        tenTK = in.readString();
+        matKhau = in.readString();
+        loaiTK = in.readString();
     }
+
+    public static final Creator<TaiKhoan> CREATOR = new Creator<TaiKhoan>() {
+        @Override
+        public TaiKhoan createFromParcel(Parcel in) {
+            return new TaiKhoan(in);
+        }
+
+        @Override
+        public TaiKhoan[] newArray(int size) {
+            return new TaiKhoan[size];
+        }
+    };
 
     public int getMaNV() {
         return maNV;
@@ -74,17 +91,6 @@ public class TaiKhoan implements Parcelable {
                 '}';
     }
 
-    public static final Creator<TaiKhoan> CREATOR = new Creator<TaiKhoan>() {
-        @Override
-        public TaiKhoan createFromParcel(Parcel in) {
-            return new TaiKhoan(in);
-        }
-
-        @Override
-        public TaiKhoan[] newArray(int size) {
-            return new TaiKhoan[size];
-        }
-    };
 
     @Override
     public int describeContents() {
@@ -93,5 +99,10 @@ public class TaiKhoan implements Parcelable {
 
     @Override
     public void writeToParcel(@NonNull Parcel dest, int flags) {
+        dest.writeInt(maNV);
+        dest.writeInt(maTK);
+        dest.writeString(tenTK);
+        dest.writeString(matKhau);
+        dest.writeString(loaiTK);
     }
 }

@@ -31,6 +31,33 @@ public class NhanVien implements Parcelable {
         this.maPB = maPB;
     }
 
+    @Override
+    public void writeToParcel(@NonNull Parcel dest, int flags) {
+        dest.writeInt(maNV);
+        dest.writeString(hoTen);
+        dest.writeString(gioiTinh);
+        dest.writeString(ngSinh);
+        dest.writeString(sdt);
+        dest.writeString(email);
+        dest.writeString(diaChi);
+        dest.writeString(cccd);
+        dest.writeString(capBac);
+        dest.writeInt(maPB);
+    }
+
+    protected NhanVien(Parcel in) {
+        maNV = in.readInt();
+        hoTen = in.readString();
+        gioiTinh = in.readString();
+        ngSinh = in.readString();
+        sdt = in.readString();
+        email = in.readString();
+        diaChi = in.readString();
+        cccd = in.readString();
+        capBac = in.readString();
+        maPB = in.readInt();
+    }
+
     public int getMaNV() {
         return maNV;
     }
@@ -115,8 +142,6 @@ public class NhanVien implements Parcelable {
 
     }
 
-    protected NhanVien(Parcel in) {
-    }
 
     @Override
     public String toString() {
@@ -151,7 +176,4 @@ public class NhanVien implements Parcelable {
         return 0;
     }
 
-    @Override
-    public void writeToParcel(@NonNull Parcel dest, int flags) {
-    }
 }

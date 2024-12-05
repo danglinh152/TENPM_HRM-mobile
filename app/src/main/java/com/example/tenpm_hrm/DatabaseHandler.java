@@ -2,11 +2,17 @@ package com.example.tenpm_hrm;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import models.Request;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
@@ -155,6 +161,38 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         }
         return false;
     }
+
+    public ArrayList<Request> getAllRequests() {
+        ArrayList<Request> requestList = new ArrayList<>();
+        db = this.getReadableDatabase();
+
+        // Truy vấn tất cả các cột từ bảng YEUCAU
+        Cursor cursor = db.query("YEUCAU", null, null, null, null, null, null);
+
+        if (cursor != null) {
+            try {
+                // Lặp qua tất cả các bản ghi trong cursor
+                while (cursor.moveToNext()) {
+                    // Lấy dữ liệu từ cursor
+                    int mayc = cursor.getInt(cursor.getColumnIndex("MAYC")); // Sử dụng tên cột chính xác
+                    int manv = cursor.getInt(cursor.getColumnIndex("MANV"));
+                    String noidung = cursor.getString(cursor.getColumnIndex("NOIDUNG"));
+                    String chude = cursor.getString(cursor.getColumnIndex("CHUDE"));
+                    int trangthai = cursor.getInt(cursor.getColumnIndex("TRANGTHAI"));
+
+                    // Tạo đối tượng Request và thêm vào danh sách
+                    Request request = new Request(mayc, manv, chude, noidung, trangthai);
+                    requestList.add(request);
+                }
+            } finally {
+                cursor.close(); // Đảm bảo đóng cursor trong khối finally
+            }
+        }
+
+        return requestList;
+    }
+
+
     public void addAdminAccount() {
         db = this.getWritableDatabase();
 

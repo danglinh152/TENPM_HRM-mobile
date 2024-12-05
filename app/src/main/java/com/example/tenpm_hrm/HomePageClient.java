@@ -2,12 +2,15 @@ package com.example.tenpm_hrm;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+
+import models.NhanVien;
 
 public class HomePageClient extends AppCompatActivity {
     private CardView cardInfo;
@@ -27,20 +30,25 @@ public class HomePageClient extends AppCompatActivity {
         cardAttendance = findViewById(R.id.cardAttendance);
         cardProject = findViewById(R.id.cardProject);
 //        progressBar = findViewById(R.id.progressBar);
+        Intent intent = getIntent();
+        NhanVien nhanVien = intent.getParcelableExtra("nhanVien");
 
         cardRequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Show ProgressBar before starting the new activity
-//                progressBar.setVisibility(View.VISIBLE);
+                // Kiểm tra xem nhanVien có khác null không
+                if (nhanVien != null) {
+                    // Tạo Intent để chuyển đến Activity RequestManagementClient
+                    Intent newRequestIntent = new Intent(HomePageClient.this, RequestManagementClient.class);
+                    newRequestIntent.putExtra("nhanVien", nhanVien); // Gửi đối tượng NhanVien qua Intent
+                    startActivity(newRequestIntent); // Khởi động Activity mới
+                } else {
+                    Log.e("HomePageClient", "NhanVien is null, cannot start RequestManagementClient");
+                }
 
-                // Start the new activity
-                Intent newRequestIntent = new Intent(HomePageClient.this, RequestManagementClient.class);
-                startActivity(newRequestIntent);
-
-                // Optionally hide the ProgressBar after a short delay
-                // This is just to simulate loading; adjust as needed
-//                v.postDelayed(() -> progressBar.setVisibility(View.GONE), 300);
+                // Nếu bạn cần hiển thị ProgressBar, hãy làm như sau
+                // progressBar.setVisibility(View.VISIBLE);
+                // v.postDelayed(() -> progressBar.setVisibility(View.GONE), 300);
             }
         });
         cardInfo.setOnClickListener(new View.OnClickListener() {

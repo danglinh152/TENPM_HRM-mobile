@@ -2,6 +2,7 @@ package com.example.tenpm_hrm;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
@@ -12,16 +13,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 import customlistview.RequestClientAdapter;
+import models.NhanVien; // Đảm bảo bạn đã import lớp NhanVien
 import models.Request;
-
 
 public class RequestManagementClient extends AppCompatActivity {
     private Button btn_new_request;
     private ArrayList<Request> requests;
     private RequestClientAdapter adapter;
-
+    private DatabaseHandler dbHandler;
     private ListView lvRQ;
-
+    private NhanVien nhanVien; // Khai báo biến để lưu đối tượng NhanVien
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,13 +34,31 @@ public class RequestManagementClient extends AppCompatActivity {
         lvRQ = findViewById(R.id.lvRQ);
 
         requests = new ArrayList<>();
-        Request request1 = new Request("rq1", "Xin nghỉ phép ngày 22/10/2024", "Nghỉ phép năm 2024: Người lao động được phép nghỉ tối đa 5 ngày trong năm. Đề nghị xem xét và phê duyệt.", 0);
-        Request request2 = new Request("rq2", "Xin đi trễ ngày 22/10/2024", "Đi trễ do lý do cá nhân: Xin phép đi trễ 2 tiếng do có việc gia đình. Cam kết hoàn thành công việc trong ngày.", 1);
-        Request request3 = new Request("rq3", "Xét duyệt review lương định kỳ", "Xét duyệt tăng lương: Đề nghị xem xét tăng lương hàng năm dựa trên hiệu suất làm việc và kết quả đánh giá.", -1);
 
-        requests.add(request1);
-        requests.add(request2);
-        requests.add(request3);
+        // Lấy Intent và extra
+        Intent intent = getIntent();
+        if (intent != null && intent.hasExtra("nhanVien")) {
+            nhanVien = intent.getParcelableExtra("nhanVien"); // Lấy đối tượng NhanVien từ Intent
+            if (nhanVien != null) {
+                // Sử dụng nhanVien ở đây nếu cần
+                // Ví dụ: Log.d("RequestManagementClient", "Received NhanVien: " + nhanVien.toString());
+            } else {
+                Log.e("RequestManagementClient", "NhanVien is null");
+            }
+        } else {
+            Log.e("RequestManagementClient", "Intent is null or does not have extra 'nhanVien'");
+        }
+
+        // Khởi tạo DatabaseHandler
+        dbHandler = new DatabaseHandler(this);
+
+        // Lấy tất cả các yêu cầu từ cơ sở dữ liệu
+        requests = dbHandler.getAllRequests();
+
+        // Nếu requests rỗng, có thể thêm một thông báo để người dùng biết
+        if (requests.isEmpty()) {
+            // Thêm thông báo hoặc xử lý khi không có yêu cầu nào
+        }
 
         adapter = new RequestClientAdapter(this, R.layout.request_item, requests);
         lvRQ.setAdapter(adapter);
@@ -48,10 +67,9 @@ public class RequestManagementClient extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent newRequestIntent = new Intent(RequestManagementClient.this, NewRequest.class);
+                newRequestIntent.putExtra("nhanVien", nhanVien); // Gửi nhanVien tới NewRequest nếu cần
                 startActivity(newRequestIntent);
             }
         });
     }
-
-
 }
