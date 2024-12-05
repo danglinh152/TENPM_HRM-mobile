@@ -90,6 +90,7 @@ id background6
 id background7
 id btnLogin
 id btnProjectAdd
+id btn_approve_all
 id btn_new_request
 id btn_pending_requests
 id button

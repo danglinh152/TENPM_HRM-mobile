@@ -3279,6 +3279,7 @@ int id bounceEnd 0x7f080072
 int id bounceStart 0x7f080073
 int id btnLogin 0x7f080074
 int id btnProjectAdd 0x7f080075
+int id btn_approve_all 0x7f0802ce
 int id btn_new_request 0x7f080076
 int id btn_pending_requests 0x7f080077
 int id button 0x7f080078

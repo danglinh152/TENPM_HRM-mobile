@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -191,6 +192,33 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         return requestList;
     }
+
+    public boolean approveRequest(int mayc) {
+        db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("TRANGTHAI", 1); // Assuming 1 indicates approved
+
+        // Update the request in the database
+        int rowsAffected = db.update("YEUCAU", values, "MAYC = ?", new String[]{String.valueOf(mayc)});
+        db.close();
+
+        return rowsAffected > 0; // Return true if at least one row was updated
+    }
+
+    public boolean approveAllRequests() {
+        db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("TRANGTHAI", 1); // Assuming 1 indicates approved
+
+        // Update all requests in the database
+        int rowsAffected = db.update("YEUCAU", values, null, null); // No condition to update all rows
+        db.close();
+
+        return rowsAffected > 0; // Return true if at least one row was updated
+    }
+
+
+
 
 
     public void addAdminAccount() {
