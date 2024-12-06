@@ -384,6 +384,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put("CHUDE", newChuDe); // Set the new topic
         values.put("NOIDUNG", newNoiDung); // Set the new information
+        values.put("TRANGTHAI", 0); // Set the new information
 
         // Update the request in the database where the id matches maYC
         int rowsAffected = db.update("YEUCAU", values, "MAYC = ?", new String[]{String.valueOf(maYC)});
