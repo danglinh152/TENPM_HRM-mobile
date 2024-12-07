@@ -28,6 +28,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.TENPM_HRM" >
         <activity
+            android:name="com.example.tenpm_hrm.UpdateFacility"
+            android:exported="false" />
+        <activity
             android:name="com.example.tenpm_hrm.MainActivity"
             android:exported="true" >
             <intent-filter>
@@ -179,8 +182,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!-- project -->
+        </activity> <!-- project -->
         <activity
             android:name="com.example.tenpm_hrm.ProjectManagement"
             android:exported="true" >
@@ -207,8 +209,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!-- employee info -->
+        </activity> <!-- employee info -->
         <activity
             android:name="com.example.tenpm_hrm.EmployeeInfo"
             android:exported="true" >
@@ -217,8 +218,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!-- login -->
+        </activity> <!-- login -->
         <activity
             android:name="com.example.tenpm_hrm.Login"
             android:exported="true" >

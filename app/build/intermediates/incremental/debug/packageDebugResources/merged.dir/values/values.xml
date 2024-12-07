@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="facility_status_options">
+        <item>Sử dụng</item>
+        <item>Bảo trì</item>
+        <item>Hư hỏng</item>
+    </string-array>
     <color name="black">#FF000000</color>
     <color name="gray">#888</color>
     <color name="green">#5AA572</color>
+    <color name="light_green">#B5F4D1</color>
     <color name="primary_color">#5C63D6</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">HRM</string>

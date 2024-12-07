@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
+import models.Facility;
 import models.Request;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
@@ -215,6 +216,63 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 Log.e("DatabaseHandler", "Error inserting second admin account data");
             }
         }
+    }
+
+    // ============Cơ sở vật chất===================
+    public void addFacility(Facility facility) {
+        db = this.getWritableDatabase();
+        db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("TENCSVC", facility.getFacilityName());
+        values.put("SOLUONG", facility.getFacilityQuantity());
+        values.put("NGAYMUA", facility.getFacilityBuyingDate());
+        values.put("TRANGTHAI", facility.getFacilityStatus());
+        long rowId = db.insert("COSOVATCHAT", null, values);
+    }
+
+    public Facility getFacility(int id) {
+        db = this.getReadableDatabase();
+        Cursor cursor = db.query("COSOVATCHAT", null, "MACSVC" + " = ?", new String[] { String.valueOf(id) },null, null, null);
+        if(cursor != null)
+            cursor.moveToFirst();
+        Facility facility = new Facility(cursor.getInt(0), cursor.getString(1), cursor.getInt(2), cursor.getString(3), cursor.getString(4), cursor.getInt(5));
+        cursor.close();
+        return facility;
+    }
+
+    public List<Facility> getAllFacility() {
+        List<Facility> facilityList = new ArrayList<>();
+        String query = "SELECT * FROM COSOVATCHAT";
+
+        db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+        cursor.moveToFirst();
+
+        while(cursor.isAfterLast() == false) {
+            Facility facility = new Facility(cursor.getInt(0), cursor.getString(1), cursor.getInt(2), cursor.getString(3), cursor.getString(4), cursor.getInt(5));
+            facilityList.add(facility);
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return facilityList;
+    }
+
+    public boolean updateFacility(Facility facility) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("MACSVC", facility.getFacilityID());
+        values.put("TENCSVC", facility.getFacilityName());
+        values.put("SOLUONG", facility.getFacilityQuantity());
+        values.put("NGAYMUA", facility.getFacilityBuyingDate());
+        values.put("TRANGTHAI", facility.getFacilityStatus());
+        values.put("MAPB", facility.getDepartmentID());
+        return db.update("COSOVATCHAT", values, "MACSVC" + " = ?", new String[]{String.valueOf(facility.getFacilityID())}) > 0;
+    }
+
+    public void deleteFacility(Facility facility) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete("COSOVATCHAT", "MACSVC" + " = ?", new String[] { String.valueOf(facility.getFacilityID())});
+        db.close();
     }
 
 

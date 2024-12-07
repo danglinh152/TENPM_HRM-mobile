@@ -4,36 +4,45 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import customlistview.FacilityAdapter;
+import models.Facility;
+
 public class CSVCManagement extends AppCompatActivity {
-    private Button addBtn;
+    private Button btnAddCSVC;
+    ListView FacilityContainer;
+    private DatabaseHandler dbHandler;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.csvc_management_admin);
 
-        addBtn = findViewById(R.id.addBtn);
+        btnAddCSVC = findViewById(R.id.btnAddCSVC);
+        FacilityContainer = findViewById(R.id.FacilityContainer);
 
-        addBtn.setOnClickListener(new View.OnClickListener() {
+        List<Facility> facilityList = new ArrayList<>();
+
+        dbHandler = new DatabaseHandler(this);
+        facilityList = dbHandler.getAllFacility();
+
+        FacilityAdapter adapter = new FacilityAdapter(this, facilityList);
+        FacilityContainer.setAdapter(adapter);
+
+        btnAddCSVC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Show ProgressBar before starting the new activity
-//                progressBar.setVisibility(View.VISIBLE);
-
-                // Start the new activity
                 Intent newRequestIntent = new Intent(CSVCManagement.this, NewCSVC.class);
                 startActivity(newRequestIntent);
-
-                // Optionally hide the ProgressBar after a short delay
-                // This is just to simulate loading; adjust as needed
-//                v.postDelayed(() -> progressBar.setVisibility(View.GONE), 300);
             }
         });
 

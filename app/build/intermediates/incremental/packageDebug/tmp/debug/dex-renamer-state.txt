@@ -1,8 +1,8 @@
-#Fri Dec 06 03:06:17 ICT 2024
-base.0=D\:\\thucHanhMobi\\projectMobi\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=D\:\\thucHanhMobi\\projectMobi\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=D\:\\thucHanhMobi\\projectMobi\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
-base.3=D\:\\thucHanhMobi\\projectMobi\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
+#Sun Dec 08 04:32:41 ICT 2024
+base.0=C\:\\Users\\DUY\\AndroidStudioProjects\\doan\\TENPM_HRM-mobile\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\Users\\DUY\\AndroidStudioProjects\\doan\\TENPM_HRM-mobile\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=C\:\\Users\\DUY\\AndroidStudioProjects\\doan\\TENPM_HRM-mobile\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
+base.3=C\:\\Users\\DUY\\AndroidStudioProjects\\doan\\TENPM_HRM-mobile\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=13/classes.dex
