@@ -40,3 +40,7 @@ Thumbs.db
 .idea/tasks.xml
 .idea/datasources.xml
 .idea/dataSources.ids
+
+ # Default ignored files
+ /shelf/
+ /workspace.xml
