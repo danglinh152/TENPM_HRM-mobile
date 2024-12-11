@@ -14,6 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import models.Facility;
+import models.Project;
+import models.Project_NhanVien;
 import models.Request;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
@@ -221,7 +223,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     // ============Cơ sở vật chất===================
     public void addFacility(Facility facility) {
         db = this.getWritableDatabase();
-        db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("TENCSVC", facility.getFacilityName());
         values.put("SOLUONG", facility.getFacilityQuantity());
@@ -272,6 +273,117 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public void deleteFacility(Facility facility) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete("COSOVATCHAT", "MACSVC" + " = ?", new String[] { String.valueOf(facility.getFacilityID())});
+        db.close();
+    }
+
+//  ================Project================
+public void addProject(Project project) {
+    db = this.getWritableDatabase();
+    ContentValues values = new ContentValues();
+    values.put("TENDUAN", project.getTenDA());
+    values.put("NGAYBATDAU", project.getNgayBD());
+    values.put("NGAYKETTHUC", project.getNgayKT());
+    values.put("TRANGTHAI", project.getTrangThai());
+    values.put("MAPB", project.getMaPB());
+    long rowId = db.insert("DUAN", null, values);
+}
+
+    public Project getProject(int id) {
+        db = this.getReadableDatabase();
+        Cursor cursor = db.query("DUAN", null, "MADA" + " = ?", new String[] { String.valueOf(id) },null, null, null);
+        if(cursor != null)
+            cursor.moveToFirst();
+        Project project = new Project(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getInt(5));
+        cursor.close();
+        return project;
+    }
+
+    public List<Project> getAllProjects() {
+        List<Project> projectList = new ArrayList<>();
+        String query = "SELECT * FROM DUAN";
+
+        db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+        cursor.moveToFirst();
+
+        while(cursor.isAfterLast() == false) {
+            Project project = new Project(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getInt(5));
+            projectList.add(project);
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return projectList;
+    }
+
+    public boolean updateProject(Project project) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("MADA", project.getMaDA());
+        values.put("TENDUAN", project.getTenDA());
+        values.put("NGAYBATDAU", project.getNgayBD());
+        values.put("NGAYKETTHUC", project.getNgayKT());
+        values.put("TRANGTHAI", project.getTrangThai());
+        values.put("MAPB", project.getMaPB());
+        return db.update("DUAN", values, "MADA" + " = ?", new String[]{String.valueOf(project.getMaDA())}) > 0;
+    }
+
+    public void deleteProject(Project project) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete("DUAN", "MADA" + " = ?", new String[] { String.valueOf(project.getMaDA())});
+        db.close();
+    }
+
+    public void addProjectNhanVien(Project_NhanVien projectNhanVien) {
+        db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("MANV", projectNhanVien.getMaNV());
+        values.put("MADA", projectNhanVien.getMaDA());
+        values.put("VAITRO", projectNhanVien.getVaiTro());
+        values.put("NGAYTHAMGIA", projectNhanVien.getNgayTG());
+        long rowId = db.insert("NHANVIEN_DUAN", null, values);
+    }
+
+    public Project_NhanVien getProjectNhanVien(int mada, int manv) {
+        db = this.getReadableDatabase();
+        Cursor cursor = db.query(
+                "NHANVIEN_DUAN", null,"MADA = ? AND MANV = ?", new String[] { String.valueOf(mada), String.valueOf(manv) }, null, null, null);
+        if(cursor != null)
+            cursor.moveToFirst();
+        Project_NhanVien projectNhanVien = new Project_NhanVien(cursor.getInt(0), cursor.getInt(1), cursor.getString(2), cursor.getString(3));
+        cursor.close();
+        return projectNhanVien;
+    }
+
+    public List<Project_NhanVien> getAllProjectsNhanVien() {
+        List<Project_NhanVien> projectNhanVienList = new ArrayList<>();
+        String query = "SELECT * FROM NHANVIEN_DUAN";
+
+        db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+        cursor.moveToFirst();
+
+        while(cursor.isAfterLast() == false) {
+            Project_NhanVien projectNhanVien = new Project_NhanVien(cursor.getInt(0), cursor.getInt(1), cursor.getString(2), cursor.getString(3));
+            projectNhanVienList.add(projectNhanVien);
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return projectNhanVienList;
+    }
+
+    public boolean updateProjectNhanVien(Project_NhanVien projectNhanVien) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("MANV", projectNhanVien.getMaNV());
+        values.put("MADA", projectNhanVien.getMaDA());
+        values.put("VAITRO", projectNhanVien.getVaiTro());
+        values.put("NGAYTHAMGIA", projectNhanVien.getNgayTG());
+        return db.update("NHANVIEN_DUAN", values, "MADA" + " = ?", new String[]{String.valueOf(projectNhanVien.getMaDA())}) > 0;
+    }
+
+    public void deleteProjectNhanVien(Project project) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete("DUAN", "MADA" + " = ?", new String[] { String.valueOf(project.getMaDA())});
         db.close();
     }
 

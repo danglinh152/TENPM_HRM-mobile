@@ -1,48 +1,51 @@
 package models;
 
 public class Project {
-    private String id;
-    private String name;
-    private String participant;
-    private String status;
+    private int maDA;
+    private String tenDA;
+    private String ngayBD;
+    private String ngayKT;
+    private String trangThai;
+    private int maPB;
 
-    public Project(String id, String name, String participant, String status) {
-        this.id = id;
-        this.name = name;
-        this.participant = participant;
-        this.status = status;
+    public Project(int maDA, String tenDA, String ngayBD, String ngayKT, String trangThai, int maPB) {
+        this.maDA = maDA;
+        this.tenDA = tenDA;
+        this.ngayBD = ngayBD;
+        this.ngayKT = ngayKT;
+        this.trangThai = trangThai;
+        this.maPB = maPB;
     }
 
-    // Getters and Setters
-    public String getId() {
-        return id;
+    public Project(String tenDA, String ngayBD, String ngayKT, int maPB) {
+        this.tenDA = tenDA;
+        this.ngayBD = ngayBD;
+        this.ngayKT = ngayKT;
+        this.trangThai = "Đang thực hiện";
+        this.maPB = maPB;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public int getMaDA() {
+        return maDA;
     }
 
-    public String getName() {
-        return name;
+    public String getTenDA() {
+        return tenDA;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getNgayBD() {
+        return ngayBD;
     }
 
-    public String getParticipant() {
-        return participant;
+    public String getNgayKT() {
+        return ngayKT;
     }
 
-    public void setParticipant(String participant) {
-        this.participant = participant;
+    public String getTrangThai() {
+        return trangThai;
     }
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
+    public int getMaPB() {
+        return maPB;
     }
 }
