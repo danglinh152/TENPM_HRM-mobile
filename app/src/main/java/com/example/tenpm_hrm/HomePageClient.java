@@ -1,18 +1,26 @@
 package com.example.tenpm_hrm;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import models.NhanVien;
 
 public class HomePageClient extends AppCompatActivity {
+    private DrawerLayout drawerLayout;
+    private ImageView imgSidebar;
+    private Button btnLogout;
     private CardView cardInfo;
     private CardView cardAttendance;
     private CardView cardProject;
@@ -25,6 +33,10 @@ public class HomePageClient extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.homepage_client);
 
+        drawerLayout = findViewById(R.id.drawer_layout);
+        imgSidebar = findViewById(R.id.imgSidebar);
+        btnLogout = findViewById(R.id.btnLogout);
+
         cardRequest = findViewById(R.id.cardRequest);
         cardInfo = findViewById(R.id.cardInfo);
         cardAttendance = findViewById(R.id.cardAttendance);
@@ -32,6 +44,36 @@ public class HomePageClient extends AppCompatActivity {
 //        progressBar = findViewById(R.id.progressBar);
         Intent intent = getIntent();
         NhanVien nhanVien = intent.getParcelableExtra("nhanVien");
+
+        imgSidebar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Mở hoặc đóng sidebar
+                if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                } else {
+                    drawerLayout.openDrawer(GravityCompat.START);
+                }
+            }
+        });
+
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Xóa dữ liệu người dùng từ SharedPreferences
+                SharedPreferences sharedPreferences = getSharedPreferences("user_prefs", MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.clear(); // Xóa tất cả dữ liệu
+                editor.apply();
+
+                // Chuyển hướng về màn hình đăng nhập
+                Intent loginIntent = new Intent(HomePageClient.this, Login.class);
+                loginIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK); // Để xóa tất cả các Activity cũ
+                startActivity(loginIntent);
+                finish(); // Kết thúc Activity hiện tại
+            }
+        });
+
 
         cardRequest.setOnClickListener(new View.OnClickListener() {
             @Override

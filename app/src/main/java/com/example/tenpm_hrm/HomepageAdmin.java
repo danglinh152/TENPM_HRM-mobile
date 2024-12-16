@@ -3,17 +3,23 @@ package com.example.tenpm_hrm;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 public class HomepageAdmin extends AppCompatActivity {
-    private Button logoutBtn;
+    private DrawerLayout drawerLayout;
+    private ImageView imgSidebar;
+    private Button btnLogout;
     private CardView cardEmployee;
     private CardView cardDepartment;
     private CardView cardAttendance;
@@ -29,7 +35,9 @@ public class HomepageAdmin extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.homepage_admin);
 
-        logoutBtn = findViewById(R.id.logoutBtn);
+        drawerLayout = findViewById(R.id.drawer_layout);
+        imgSidebar = findViewById(R.id.imgSidebar);
+        btnLogout = findViewById(R.id.btnLogout);
 
         // Khởi tạo các CardView
         cardRequest = findViewById(R.id.cardRequest);
@@ -54,7 +62,19 @@ public class HomepageAdmin extends AppCompatActivity {
         // Nhận dữ liệu từ Intent
         Intent intent = getIntent();
 
-        logoutBtn.setOnClickListener(new View.OnClickListener() {
+        imgSidebar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Mở hoặc đóng sidebar
+                if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                } else {
+                    drawerLayout.openDrawer(GravityCompat.START);
+                }
+            }
+        });
+
+        btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Xóa dữ liệu người dùng từ SharedPreferences

@@ -25,6 +25,8 @@ public class Project {
         this.maPB = maPB;
     }
 
+
+
     public int getMaDA() {
         return maDA;
     }

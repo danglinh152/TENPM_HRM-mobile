@@ -36,13 +36,13 @@ public class ProjectManagement extends AppCompatActivity {
 
 
         // Create and add three project items
-        Project project1 = new Project("1", "Phát triển web TENPM", "Huỳnh Nhật Duy", "Chưa hoàn thành");
-        Project project2 = new Project("2", "Phát triển web bán hàng", "Huỳnh Nhật Duy", "Hoàn thành");
-        Project project3 = new Project("3", "Phát triển web bán hàng", "Huỳnh Nhật Duy", "Hoàn thành");
-
-        addProjectToContainer(projectContainer, project1);
-        addProjectToContainer(projectContainer, project2);
-        addProjectToContainer(projectContainer, project3);
+//        Project project1 = new Project("1", "Phát triển web TENPM", "Huỳnh Nhật Duy", "Chưa hoàn thành");
+//        Project project2 = new Project("2", "Phát triển web bán hàng", "Huỳnh Nhật Duy", "Hoàn thành");
+//        Project project3 = new Project("3", "Phát triển web bán hàng", "Huỳnh Nhật Duy", "Hoàn thành");
+//
+//        addProjectToContainer(projectContainer, project1);
+//        addProjectToContainer(projectContainer, project2);
+//        addProjectToContainer(projectContainer, project3);
     }
 
     private void addProjectToContainer(ViewGroup container, Project project) {
@@ -53,13 +53,13 @@ public class ProjectManagement extends AppCompatActivity {
         TextView tvProjectStatus = projectItem.findViewById(R.id.tvProjectStatus);
         ImageView ivProjectDelete = projectItem.findViewById(R.id.ivProjectDelete);
 
-        tvProjectName.setText(project.getName());
-        tvProjectParticipant.setText(project.getParticipant());
-        tvProjectStatus.setText(project.getStatus());
-        if (project.getStatus() == "Hoàn thành") {
-            tvProjectStatus.setBackgroundResource(R.drawable.employee_type_shape);
-            tvProjectStatus.setTextColor(getResources().getColor(R.color.green));
-        }
+//        tvProjectName.setText(project.getName());
+//        tvProjectParticipant.setText(project.getParticipant());
+//        tvProjectStatus.setText(project.getStatus());
+//        if (project.getStatus() == "Hoàn thành") {
+//            tvProjectStatus.setBackgroundResource(R.drawable.employee_type_shape);
+//            tvProjectStatus.setTextColor(getResources().getColor(R.color.green));
+//        }
 
         ivProjectDelete.setOnClickListener(new View.OnClickListener() {
             @Override
