@@ -15,6 +15,8 @@ import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.tenpm_hrm.attendance.AttendanceDetails;
+
 import models.NhanVien;
 
 public class HomePageClient extends AppCompatActivity {
@@ -115,9 +117,15 @@ public class HomePageClient extends AppCompatActivity {
                 // Show ProgressBar before starting the new activity
 //                progressBar.setVisibility(View.VISIBLE);
 
-                // Start the new activity
-                Intent newRequestIntent = new Intent(HomePageClient.this, AttendanceDetails.class);
-                startActivity(newRequestIntent);
+                if (nhanVien != null) {
+                    // Tạo Intent để chuyển đến Activity RequestManagementClient
+                    Intent newRequestIntent = new Intent(HomePageClient.this, AttendanceDetails.class);
+                    newRequestIntent.putExtra("nhanVien", nhanVien); // Gửi đối tượng NhanVien qua Intent
+                    startActivity(newRequestIntent); // Khởi động Activity mới
+                } else {
+                    Log.e("HomePageClient", "NhanVien is null, cannot start RequestManagementClient");
+                }
+
 
                 // Optionally hide the ProgressBar after a short delay
                 // This is just to simulate loading; adjust as needed

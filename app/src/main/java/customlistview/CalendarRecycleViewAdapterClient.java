@@ -50,19 +50,10 @@ public class CalendarRecycleViewAdapterClient extends RecyclerView.Adapter<Calen
                     currentDate.getMonthValue() == displayedMonth &&
                     currentDate.getYear() == displayedYear) {
                 holder.dayOfMonth.setBackgroundResource(R.drawable.gray_circle);
-            } else if (position == 22 || position == 17 || position == 15 ) {
-                holder.dayOfMonth.setBackgroundResource(R.drawable.red_circle);
             }
-            else if (position == 10 || position == 13 ) {
-                holder.dayOfMonth.setBackgroundResource(R.drawable.blue_circle);
-            }
-            else if (position == 9 ) {
-                holder.dayOfMonth.setBackgroundResource(R.drawable.yellow_circle);
-            }
-
-            else {
-                holder.dayOfMonth.setBackgroundResource(R.drawable.green_circle);
-            }
+//            else if (position == holder.getAdapterPosition()) {
+//                holder.dayOfMonth.setBackgroundResource(R.drawable.red_circle);
+//            }
         } else {
             holder.dayOfMonth.setBackground(null);
         }
@@ -72,7 +63,6 @@ public class CalendarRecycleViewAdapterClient extends RecyclerView.Adapter<Calen
     public int getItemCount() {
         return daysOfMonth.size();
     }
-
 
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
