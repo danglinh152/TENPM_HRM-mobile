@@ -693,6 +693,19 @@ public void addProject(Project project) {
         return employeeList;
     }
 
+    public boolean addAccount(String employeeId, String username, String password, String accountType) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("MANV", employeeId);
+        values.put("TENTK", username);
+        values.put("MATKHAU", password);
+        values.put("LOAITAIKHOAN", accountType);
+        long result = db.insert("TAIKHOAN", null, values);
+        if(result != 0){
+            return true;
+        }
+        return false;
+    }
 
 
 

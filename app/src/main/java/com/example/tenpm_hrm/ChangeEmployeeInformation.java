@@ -40,7 +40,7 @@ public class ChangeEmployeeInformation extends AppCompatActivity {
         etCCCD = findViewById(R.id.CCCD);
         etPosition = findViewById(R.id.Position);
         etDepartment = findViewById(R.id.idDepartment);
-        btnSave = findViewById(R.id.button);
+        btnSave = findViewById(R.id.btnAddAccount);
 
         // Khởi tạo DatabaseHandler
         dbHandler = new DatabaseHandler(this);

@@ -35,7 +35,7 @@ public class EmployeeManagement extends AppCompatActivity {
         setContentView(R.layout.employee_management);
 
         mainLayout = findViewById(R.id.main);
-        btnAddEmployee = findViewById(R.id.button);
+        btnAddEmployee = findViewById(R.id.btnAddAccount);
         dbHelper = new DatabaseHandler(this);
         ivSearch = findViewById(R.id.ivSearch);
 
