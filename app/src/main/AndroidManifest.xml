@@ -59,7 +59,7 @@
             </intent-filter>
         </activity> <!-- chamcong -->
         <activity
-            android:name=".AttendanceDetails"
+            android:name=".attendance.AttendanceDetails"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -68,7 +68,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Checkinout"
+            android:name=".attendance.Checkinout"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -77,7 +77,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AttendanceManagement"
+            android:name=".attendance.AttendanceManagement"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -52,12 +52,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                     "ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     "MANV INTEGER NOT NULL, " +
                     "NGAYLAMVIEC TEXT NOT NULL, " +
-                    "GIOBATDAU TIME, " +
-                    "GIOKETTHUC TIME, " +
-                    "TANGCA INTEGER DEFAULT 0 CHECK (TANGCA >= 0), " +
-                    "NGHIKHONGPHEP INTEGER DEFAULT 0 CHECK (NGHIKHONGPHEP IN (0, 1)), " +
-                    "LYDO NVARCHAR(255), " +
-                    "TRANGTHAI NVARCHAR(20),"  +
+                    "GIOBATDAU TEXT, " +
+                    "GIOKETTHUC TEXT, " +
+                    "TRANGTHAI TEXT,"  +
                     "CONSTRAINT chamcong_fk FOREIGN KEY (MANV) REFERENCES NHANVIEN (MANV)" +
                     ");";
     private static final String CREATE_TABLE_TAIKHOAN =
@@ -695,6 +692,9 @@ public void addProject(Project project) {
         db.close();
         return employeeList;
     }
+
+
+
 
 
 

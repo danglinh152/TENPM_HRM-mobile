@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:id="@+id/linearContent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -24,11 +25,11 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/back"
-                android:textColor="@color/primary_color"
-                android:background="@android:color/transparent"
+                android:textColor="@color/black"
+                android:backgroundTint="#D9D7D7"
                 android:textStyle="bold"
                 android:onClick="prevMonthAction"
-                android:textSize="20sp"/>
+                />
 
             <TextView
                 android:id="@+id/tvMonthYear"
@@ -36,7 +37,6 @@
                 android:layout_weight="2"
                 android:layout_height="wrap_content"
                 android:text="Feb 2021"
-                android:textSize="20sp"
                 android:textAlignment="center"
                 android:textColor="@color/black"/>
 
@@ -45,11 +45,11 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/forward"
-                android:textColor="@color/primary_color"
-                android:background="@android:color/transparent"
+                android:textColor="@color/black"
+                android:backgroundTint="#D9D7D7"
                 android:textStyle="bold"
                 android:onClick="nextMonthAction"
-                android:textSize="20sp"/>
+                />
 
         </LinearLayout>
 
@@ -65,7 +65,7 @@
                 android:text="SUN"
                 android:textColor="@color/gray"
                 android:textAlignment="center"
-                android:textSize="16sp"/>
+                />
 
             <TextView
                 android:layout_width="0dp"
@@ -74,7 +74,7 @@
                 android:text="MON"
                 android:textColor="@color/gray"
                 android:textAlignment="center"
-                android:textSize="16sp"/>
+               />
 
             <TextView
                 android:layout_width="0dp"
@@ -83,7 +83,7 @@
                 android:text="TUE"
                 android:textColor="@color/gray"
                 android:textAlignment="center"
-                android:textSize="16sp"/>
+                />
 
             <TextView
                 android:layout_width="0dp"
@@ -92,7 +92,7 @@
                 android:text="WED"
                 android:textColor="@color/gray"
                 android:textAlignment="center"
-                android:textSize="16sp"/>
+                />
 
             <TextView
                 android:layout_width="0dp"
@@ -101,7 +101,7 @@
                 android:text="THUR"
                 android:textColor="@color/gray"
                 android:textAlignment="center"
-                android:textSize="16sp"/>
+                />
 
             <TextView
                 android:layout_width="0dp"
@@ -110,8 +110,7 @@
                 android:text="FRI"
                 android:textColor="@color/gray"
                 android:textAlignment="center"
-                android:textSize="16sp"/>
-
+                />
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -119,7 +118,7 @@
                 android:text="SAT"
                 android:textColor="@color/gray"
                 android:textAlignment="center"
-                android:textSize="16sp"/>
+                />
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
@@ -129,145 +128,128 @@
             android:layout_height="300dp"/>
 
         <RelativeLayout
+            android:id="@+id/content"
             android:layout_width="360dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:padding="10dp"
             android:layout_gravity="center_horizontal"
-            android:background="@drawable/rounded_corner_background">
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_corner_background"
+            android:padding="10dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="15dp"
+                android:layout_centerHorizontal="true"
                 android:background="@drawable/item_account"
-                android:layout_centerHorizontal="true">
+                android:padding="15dp">
 
                 <TextView
                     android:id="@+id/workDays"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Số ngày làm: "
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:textSize="20dp"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true" />
+                    android:layout_alignParentTop="true"
+                    android:text="Ngày: "
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/workDaysValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="18 buổi"
                     android:layout_alignTop="@id/workDays"
+                    android:layout_alignParentTop="true"
                     android:layout_toEndOf="@id/workDays"
+                    android:text=""
                     android:textColor="@color/black"
-                    android:textSize="20dp"
-                    android:layout_alignParentTop="true" />
+                     />
 
                 <TextView
-                    android:id="@+id/late"
+                    android:id="@+id/checkInTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/workDays"
-                    android:textSize="20dp"
-                    android:textStyle="bold"
                     android:layout_marginTop="7dp"
-                    android:text="Số lần đi muộn: "
-                    android:textColor="@color/black" />
+                    android:text="Giờ checkin: "
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/lateValue"
+                    android:id="@+id/checkInTimeValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/late"
-                    android:layout_toEndOf="@+id/late"
-                    android:textSize="20dp"
-                    android:text="2"
-                    android:textColor="@color/black" />
+                    android:layout_alignTop="@+id/checkInTime"
+                    android:layout_toEndOf="@+id/checkInTime"
+                    android:text=""
+                    android:textColor="@color/black"
+                    />
 
                 <TextView
-                    android:id="@+id/paidLeaves"
+                    android:id="@+id/checkOutTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/late"
-                    android:textSize="20dp"
+                    android:layout_below="@+id/checkInTime"
                     android:layout_marginTop="7dp"
-                    android:textStyle="bold"
-                    android:text="Số ngày nghỉ có phép: "
-                    android:textColor="@color/black" />
+                    android:text="Giờ checkout: "
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/paidLeavesValue"
+                    android:id="@+id/checkOutTimeValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignTop="@id/paidLeaves"
-                    android:layout_toEndOf="@id/paidLeaves"
-                    android:textSize="20dp"
-                    android:text="0"
-                    android:textColor="@color/black" />
+                    android:layout_alignTop="@id/checkOutTime"
+                    android:layout_toEndOf="@id/checkOutTime"
+                    android:text="17:00"
+                    android:textColor="@color/black"
+                  />
 
                 <TextView
-                    android:id="@+id/nonPaidLeaves"
+                    android:id="@+id/status"
+
                     android:layout_width="wrap_content"
-                    android:textSize="20dp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/paidLeaves"
-                    android:textStyle="bold"
+                    android:layout_below="@+id/checkOutTime"
                     android:layout_marginTop="7dp"
-                    android:text="Số ngày nghỉ Không phép: "
-                    android:textColor="@color/black" />
+                    android:text="Trạng thái: "
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/nonPaidLeavesValue"
+                    android:id="@+id/statusValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/nonPaidLeaves"
-                    android:layout_toEndOf="@+id/nonPaidLeaves"
-                    android:textSize="20dp"
-                    android:text="0"
+                    android:layout_alignTop="@+id/status"
+                    android:layout_toEndOf="@+id/status"
+                    android:text=""
                     android:textColor="@color/black" />
-
-                <TextView
-                    android:id="@+id/overtime"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/nonPaidLeaves"
-                    android:textSize="20dp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="7dp"
-                    android:text="Số giờ tăng ca: "
-                    android:textColor="@color/black" />
-
-                <TextView
-                    android:id="@+id/overtimeValue"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/overtime"
-                    android:layout_toEndOf="@+id/overtime"
-                    android:textSize="20dp"
-                    android:text="0"
-                    android:textColor="@color/black" />
-
             </RelativeLayout>
         </RelativeLayout>
     </LinearLayout>
 
     <Button
-        android:id="@+id/buttonAttendanceCheckInOut"
+        android:id="@+id/checkInBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:paddingLeft="40dp"
-        android:paddingTop="20dp"
-        android:paddingRight="40dp"
-        android:paddingBottom="20dp"
-        android:text="Chấm công"
-        android:textColor="@color/white"
-        android:textSize="28sp"
-        android:backgroundTint="#5C63D6"
-        app:cornerRadius="15dp"
+        android:layout_marginStart="90dp"
+        android:layout_below="@+id/linearContent"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#1E5BE9"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"/>
+        android:text="Check In"
+        android:textColor="@color/black"
+        app:cornerRadius="5dp"
+        />
+<!--    <Button-->
+<!--        android:id="@+id/checkOutBtn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_below="@+id/linearContent"-->
+<!--        android:layout_marginStart="220dp"-->
+<!--        android:backgroundTint="#1E58E9"-->
+<!--        android:text="Check Out"-->
+<!--        android:textColor="@color/black"-->
+<!--        app:cornerRadius="5dp" />-->
 
 </RelativeLayout>
